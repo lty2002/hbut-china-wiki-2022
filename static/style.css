@@ -1,5 +1,6 @@
 body {
     padding-top: 56px;
+    background-color: #f6efe7;
 }
 
 .left-aligned {
@@ -63,3 +64,62 @@ footer a:hover {
     color: white;
     text-decoration: underline;
 }
+
+/* team start */
+
+@font-face {
+    font-family: NAME CaslonGraphique;
+    src: url("https://static.igem.wiki/teams/4249/wiki/caslongraphique.otf");
+}
+
+@font-face {
+    font-family: INTRODUCTION Caslon Bd BT;
+    src: url("https://static.igem.wiki/teams/4249/wiki/caslon-bd-bt.ttf");
+}
+
+.group-photo-area {
+    background-color: #113050;
+}
+
+.group-photo-frame {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+.single-member {
+    position: relative;
+}
+
+.member-img {
+    width: 10rem;
+}
+
+.member-name {
+    font-family: "NAME CaslonGraphique", sans-serif;
+    font-size: 16pt;
+}
+
+.pi .member-name {
+    font-family: "NAME CaslonGraphique", sans-serif;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.member-introduction {
+    font-family: "INTRODUCTION Caslon Bd BT", sans-serif;
+    font-size: 14pt;
+
+    min-height: 120px;
+    text-align: justify;
+}
+
+.member-stamp {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3rem;
+    width: 3rem;
+}
+/* team end */
