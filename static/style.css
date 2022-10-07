@@ -8,14 +8,164 @@ body {
 }
 
 .bg-dark {
-    background-color: #343a40 !important;
+    background-color: #4c4c93 !important;
 }
 
 .bg-hero {
     background-color: #7952b3;
 }
 
-/* CALLOUT */
+/* font start */
+
+@font-face {
+    font-family: portada-regular;
+    src: url('https://static.igem.wiki/teams/4249/wiki/font/portada-regular.otf');
+}
+
+@font-face {
+    font-family: caslongraphique;
+    src: url("https://static.igem.wiki/teams/4249/wiki/font/caslongraphique.otf");
+}
+
+@font-face {
+    font-family: caslon-bd-bt;
+    src: url("https://static.igem.wiki/teams/4249/wiki/font/caslon-bd-bt.ttf");
+}
+
+@font-face {
+    font-family: courier;
+    src: url('https://static.igem.wiki/teams/4249/wiki/font/courier.otf');
+}
+
+@font-face {
+    font-family: caslonltstd-antique;
+    src: url("https://static.igem.wiki/teams/4249/wiki/font/caslonltstd-antique.otf");
+}
+
+@font-face {
+    font-family: courier;
+    src: url('https://static.igem.wiki/teams/4249/wiki/font/courier.otf');
+}
+
+@font-face {
+    font-family: caslongraphique;
+    src: url("https://static.igem.wiki/teams/4249/wiki/font/caslongraphique.otf");
+}
+
+@font-face {
+    font-family: caslon-bd-bt;
+    src: url("https://static.igem.wiki/teams/4249/wiki/font/caslon-bd-bt.ttf");
+}
+
+@font-face {
+    font-family: ecliptica-bt-semi-serif;
+    src: url("https://static.igem.wiki/teams/4249/wiki/font/ecliptica-bt-semi-serif.ttf");
+}
+
+@font-face {
+    font-family: modern-no-20-regular;
+    src: url("https://static.igem.wiki/teams/4249/wiki/font/modern-no-20-regular.ttf");
+}
+
+@font-face {
+    font-family: modern20-bt;
+    src: url("https://static.igem.wiki/teams/4249/wiki/font/modern20-bt.ttf");
+}
+
+@font-face {
+    font-family: times-new-roman;
+    src: url("https://static.igem.wiki/teams/4249/wiki/font/times-new-roman.ttf");
+}
+
+/* font end */
+
+/* menu start */
+.logo {
+    height: 40px;
+}
+
+.navbar {
+    font-family: portada-regular, sans-serif;
+}
+
+.nav-item {
+    margin: 0 3px;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .nav-link.active {
+    background: #c17eb3;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #dedefc
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    /*color: #f9f0e7;*/
+}
+
+.dropdown-menu {
+    background: #f9f0e7;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #9eccd5;
+    color: #fff;
+}
+
+/* menu end */
+
+/* tool start */
+.sidebar {
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+    height: 100px;
+}
+
+.sidebar .top-img {
+    display: none;
+    width: 70px;
+    height: auto;
+}
+
+/* tool end */
+
+/* cursor start */
+html, .cursor {
+    cursor: url('https://static.igem.wiki/teams/4249/wiki/global/wand.png'), auto !important;
+}
+
+.halation {
+    z-index: 2147483647;
+    width: 0;
+    height: auto;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.lumos {
+    z-index: 2147483646;
+    width: 0;
+    height: auto;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* cursor end */
+
+/* CALLOUT start */
 .bd-callout {
     padding: 1.25rem;
     margin-top: 1.25rem;
@@ -53,73 +203,138 @@ body {
     border-left-color: #d9534f
 }
 
-/* footer */
-footer a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
+/* CALLOUT end */
+
+/* index start */
+.index-container {
 }
 
-footer a:hover {
-    color: white;
-    text-decoration: underline;
+.index-upper-container {
+    width: 100%;
+    background: #3a3a7c;
+    background-size: 100%;
 }
 
-/* team start */
-
-@font-face {
-    font-family: NAME CaslonGraphique;
-    src: url("https://static.igem.wiki/teams/4249/wiki/caslongraphique.otf");
+.index-upper-img-container {
+    position: relative;
+    height: 66.67vw;
+    overflow: hidden;
 }
 
-@font-face {
-    font-family: INTRODUCTION Caslon Bd BT;
-    src: url("https://static.igem.wiki/teams/4249/wiki/caslon-bd-bt.ttf");
+.index-upper-img-container img {
+    display: block;
+    width: 100%;
 }
 
-.group-photo-area {
-    background-color: #113050;
-}
-
-.group-photo-frame {
+.index-upper-img-container div:nth-child(1) {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.index-upper-img-container div:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.index-upper-img-container div:nth-child(3) {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 99;
 }
 
-.single-member {
-    position: relative;
-}
-
-.member-img {
-    width: 10rem;
-}
-
-.member-name {
-    font-family: "NAME CaslonGraphique", sans-serif;
-    font-size: 16pt;
-}
-
-.pi .member-name {
-    font-family: "NAME CaslonGraphique", sans-serif;
-    font-size: 16pt;
-    text-align: center;
-}
-
-.member-introduction {
-    font-family: "INTRODUCTION Caslon Bd BT", sans-serif;
-    font-size: 14pt;
-
-    min-height: 120px;
-    text-align: justify;
-}
-
-.member-stamp {
+.index-upper-img-container div:nth-child(4) {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 3rem;
-    width: 3rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
-/* team end */
+
+.index-lower-container {
+    position: relative;
+    top: -22vw;
+}
+
+.index-title1 {
+    position: relative;
+    background: url("https://static.igem.wiki/teams/4249/wiki/index/index-lower-1.png") no-repeat;
+    background-size: 400px;
+    width: 400px;
+    height: 130px;
+}
+
+.index-title1 > div {
+    position: absolute;
+    left: 180px;
+    bottom: 20px;
+    font-size: 32pt;
+    font-family: ecliptica-bt-semi-serif, sans-serif;
+    color: #113050;
+}
+
+.index-title1 > div::first-letter {
+    color: #A00F0F;
+}
+
+.index-title2 {
+    position: relative;
+    background: url("https://static.igem.wiki/teams/4249/wiki/index/index-lower-2.png") no-repeat;
+    background-size: 400px;
+    width: 400px;
+    height: 130px;
+}
+
+.index-title2 > div {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 32pt;
+    font-family: ecliptica-bt-semi-serif, sans-serif;
+    color: #113050;
+}
+
+.index-title2 > div span {
+    display: inline-block;
+}
+
+.index-title2 > div span::first-letter {
+    color: #A00F0F;
+}
+
+.index-text-bg {
+    background-size: 700px;
+    width: 800px;
+    padding: 80px;
+}
+
+.index-text {
+    font-family: "caslon-bd-bt", sans-serif;
+    text-align: justify;
+    font-size: 16pt;
+}
+
+.index-text::first-letter {
+    float: left;
+    text-align: center;
+    font-size: 32pt;
+    font-weight: bold;
+    font-family: lucida-bright, sans-serif;
+}
+
+.index-circle-container {
+    background: url("https://static.igem.wiki/teams/4249/wiki/index/index-lower-4.png") no-repeat;
+    background-size: 180px;
+    width: 180px;
+    height: 180px;
+}
+
+/* index end */
+

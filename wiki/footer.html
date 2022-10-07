@@ -1,40 +1,207 @@
-<footer class="pt-5 pb-5 footer py-5 mt-5 bg-dark text-white">
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-lg-6 col-xs-12">
-                <h4 class="mb-3">Heading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique
-                    convallis</p>
+<style>
+    .text-red {
+        color: #A00F0F;
+    }
+
+    .pattern {
+        width: 70px;
+    }
+
+    .footer-main {
+        width: 100%;
+        padding: 1rem 0;
+        clip-path: polygon(50px 0, calc(100% - 50px) 0,
+        100% 50px, 100% calc(100% - 50px),
+        calc(100% - 50px) 100%, 50px 100%,
+        0 calc(100% - 50px), 0 50px);
+        background: linear-gradient(-45deg, #103050 34px, transparent 0) bottom right,
+        linear-gradient(45deg, #103050 34px, transparent 0) bottom left,
+        linear-gradient(135deg, #103050 34px, transparent 0) top left,
+        linear-gradient(-135deg, #103050 34px, transparent 0) top right;
+        background-size: 50% 51%;
+        background-repeat: no-repeat;
+        border: solid 3px #103050;
+        font-family: Courier, sans-serif;
+    }
+
+    .part-1, .part-2 {
+        position: relative;
+        overflow: visible;
+    }
+
+    .part-1::before, .part-2::before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 60%;
+        height: 3px;
+        background: #A00F0F;
+        display: block;
+    }
+
+    .part-1::after, .part-2::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        width: 3px;
+        height: 50%;
+        background: #A00F0F;
+        display: none;
+    }
+
+    @media (min-width: 992px) {
+        .part-1::before, .part-2::before {
+            display: none;
+        }
+
+        .part-1::after, .part-2::after {
+            display: block;
+        }
+    }
+
+    .part-title {
+        font-size: 28pt;
+        font-weight: bold;
+    }
+
+    i {
+        color: #103050;
+        font-size: 16pt !important;
+        line-height: 20pt;
+    }
+
+    .contact-us-list {
+        width: 90%;
+    }
+
+    .contact-us-list li {
+        color: #09090a;
+        font-size: 13pt;
+        line-height: 20pt;
+    }
+
+    .contact-us-list p, .contact-us-list a {
+        color: #09090a;
+        margin-left: 0.5rem;
+        line-height: 20pt;
+    }
+
+    .contact-us-list p:hover, .contact-us-list a:hover {
+        color: #A00F0F;
+        margin-left: 0.6rem;
+    }
+
+    .qrcode {
+        width: 120px;
+    }
+
+    .sponsor {
+        width: 200px;
+    }
+
+    .must-mention {
+        color: #09090a;
+        font-size: 14pt;
+    }
+
+    .must-mention a {
+        color: #09090a;
+    }
+
+    .must-mention a:hover {
+        color: #A00F0F;
+    {#font-weight: bold;#}
+    }
+</style>
+<footer class="footer pt-5">
+    <div class="d-flex justify-content-center my-2">
+        <div class="pattern">
+            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/footer/pattern.png" alt="">
+        </div>
+    </div>
+    <div class="container footer-main">
+        <div class="row justify-content-center my-4">
+            <div class="col-4 col-lg-2">
+                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/footer/hbut-logo.png" alt="">
             </div>
-            <div class="col-lg-3 col-xs-12">
-                <h4 class="mt-lg-0 mt-sm-3">Links</h4>
-                <ul class="m-2 p-2">
-                    <li><a href="#">Lorem ipsum</a></li>
-                    <li><a href="#">Nam mauris velit</a></li>
-                    <li><a href="#">Etiam vitae mauris</a></li>
-                    <li><a href="#">Fusce scelerisque</a></li>
-                    <li><a href="#">Sed faucibus</a></li>
-                    <li><a href="#">Mauris efficitur nulla</a></li>
+        </div>
+        <div class="row">
+            <div class="part-1 col-12 col-lg-4 px-2 py-2 d-flex flex-column justify-content-start align-items-center">
+                <div class="part-title text-nowrap align-self-center">
+                    Contact Us<span class="text-red">.</span>
+                </div>
+                <ul class="contact-us-list list-unstyled">
+                    <li class="d-flex">
+                        <i class="fa fa-fw fa-map-marker flex-shrink-0"></i>
+                        <div>
+                            <p class="mb-0">No. 28 Nanli Road, Hong-shan District, Wuhan, Hubei Province, P.R.China</p>
+                        </div>
+                    </li>
+                    <li class="d-flex">
+                        <i class="fa fa-fw fa-internet-explorer flex-shrink-0"></i>
+                        <div>
+                            <a class="text-decoration-none" href="https://www.hbut.edu.cn">https://www.hbut.edu.cn</a>
+                        </div>
+                    </li>
+                    <li class="d-flex">
+                        <i class="fa fa-fw fa-envelope flex-shrink-0"></i>
+                        <div>
+                            <a class="text-decoration-none" href="mailto:HBUT_China@163.com">HBUT_China@163.com</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-xs-12">
-                <h4 class="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-                <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-                <p class="mb-0">(541) 754-3010</p>
-                <p>info@hsdf.com</p>
+            <div class="part-2 col-12 col-lg-4 px-2 py-2 d-flex flex-column justify-content-start">
+                <div class="part-title text-nowrap align-self-center">
+                    Follow Us<span class="text-red">.</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa fa-wechat my-1"></i>
+                    <div class="qrcode">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/footer/qrcode.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="part-3 col-12 col-lg-4 px-2 py-2 d-flex flex-column justify-content-start">
+                <div class="part-title text-nowrap align-self-center">
+                    Sponsors<span class="text-red">.</span>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <div class="sponsor">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/footer/angel.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
         <hr>
-        <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
-        <div class="row mt-4">
-            <div class="col">
-                <p class="mb-0"><small>© 2022 - Content on this site is licensed under a <a class="subfoot"
-                                                                                            href="https://creativecommons.org/licenses/by/4.0/"
-                                                                                            rel="license">Creative
-                    Commons Attribution 4.0 International license</a>.</small></p>
-                <p><small>The repository used to create this website is available at <a
-                        href="https://gitlab.igem.org/2022/hbut-china">gitlab.igem.org/2022/hbut-china</a>.</small></p>
+        <div class="row mt-4 mx-1">
+            <div class="must-mention col text-center">
+                <p class="mb-0">
+                    <small>© 2022 - Content on this site is licensed under a
+                        <a class="text-decoration-none fw-bold" href="https://creativecommons.org/licenses/by/4.0/"
+                           rel="license">Creative Commons Attribution 4.0 International license</a>.</small>
+                </p>
+                <p>
+                    <small>The repository used to create this website is available at
+                        <a class="text-decoration-none fw-bold" href="https://gitlab.igem.org/2022/hbut-china">gitlab.igem.org/2022/hbut-china</a>.</small>
+                </p>
             </div>
         </div>
     </div>
+
+    <div class="d-flex justify-content-around px-3">
+        <div>
+            <img src="https://static.igem.wiki/teams/4249/wiki/footer/book.png" alt="" class="img-fluid">
+        </div>
+    </div>
 </footer>
+<script>
+    var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>

@@ -1,41 +1,209 @@
 {% extends "layout.html" %}
 
 {% block title %}Education{% endblock %}
-{% block lead %}Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology.{% endblock %}
+{% block lead %}Innovative educational tools and outreach activities have the ability to establish a two-way dialogue
+    with new communities by discussing public values and the science behind synthetic biology.{% endblock %}
 
 {% block page_content %}
+    <style>
+        .dna-into-the-campus-con {
+            background: #103050;
+            color: #C8B186;
+        }
 
-<div class="row mt-4">
-    <div class="col">
-        <div class="bd-callout bd-callout-info">
-            <h4>Best Education Special Prize</h4>
-            <p>How have you developed new opportunities to include more people in shaping synthetic biology? Innovative
-                educational tools and outreach activities have the ability to establish a two-way dialogue with new
-                communities by discussing public values and the science behind synthetic biology. Document your approach
-                and what was learned by everyone involved to compete for this award.</p>
-            <p>To compete for the Best Education Prize, please describe your work on this page and also fill out the
-                description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.
-            </p>
-            <hr>
-            <p>Please see the <a href="https://competition.igem.org/judging/awards">2022 Awards Page</a> for more
-                information.</p>
+        .dna-into-the-campus-title {
+            position: relative;
+            background-image: url("https://static.igem.wiki/teams/4249/wiki/education/education-img-10.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 18vw;
+        }
+
+        .dna-into-the-campus-title p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 30%);
+            font-size: 30pt;
+            white-space: nowrap;
+            color: #C8B186;
+            font-family: modern20-bt, sans-serif;
+        }
+
+        .dna-into-the-campus-text {
+            color: #C8B186;
+            font-size: 16pt;
+        }
+
+        .dna-into-the-campus-text p {
+            text-align: center;
+            font-size: 16pt;
+            font-family: caslon-bd-bt, sans-serif;
+        }
+
+        .dna-into-the-campus-end p {
+            background: #cdb080;
+            color: #103050;
+            font-size: 16pt;
+            border-radius: 4px;
+            font-family: caslon-bd-bt, sans-serif;
+        }
+
+        .divider {
+            height: 3px;
+            background: #400732;
+        }
+
+    </style>
+    <div style="width: 100%">
+        <img style="width: 100%" src="https://static.igem.wiki/teams/4249/wiki/education/education-img-09.png" alt="">
+    </div>
+
+    <div class="container">
+        <div class="dna-into-the-campus-con mt-5">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div class="dna-into-the-campus-title text-center">
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row dna-into-the-campus-text justify-content-center">
+                <p class="col-10">
+                    Let primary school children explore the field of biological knowledge.
+                    July 1st We went to a primary school, and the basic knowledge of the double helix structure of
+                    DNA was popularized. For children, the theoretical knowledge was a bit complicated, so the team
+                    chose to transfer knowledge by "shape".
+                </p>
+            </div>
+            <div class="row dna-into-the-campus-end justify-content-center mt-4">
+                <p class="col-2 text-center">
+                    DNA
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <div class="row mt-5">
+                <div class="col-4">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/education/education-img-06.png"
+                         alt="">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/education/education-img-07.png"
+                         alt="">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/education/education-img-08.png"
+                         alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 py-3 px-4" style="background:#cdb080;">
+            <div class="row justify-content-center">
+                <p class="text-center"
+                   style="text-align: justify; font-size: 16pt;color: #ffffff;font-family: caslon-bd-bt, sans-serif;">
+                    Wise teaching methods After the team's easy-to-understand theoretical teaching, we began to lead
+                    our
+                    friends to draw the image of DNA. During the teaching process, we prepared: colored pens, A4
+                    paper,
+                    wet paper towels, etc. At first, children have no idea about drawing DNA, but they just find it
+                    interesting. Under the leadership of the team, they draw relevant lines, and surprises begin to
+                    appear on their faces. We believe that this education can be regarded as achieving its goal if
+                    children draw pictures themselves and express DNA with their own hearts.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-5 d-flex flex-column justify-content-center">
+                    <div class="divider w-100"></div>
+                </div>
+                <div class="col-2 d-flex justify-content-center">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/education/education-img-11.png"
+                         alt="">
+                </div>
+                <div class="col-5 d-flex flex-column justify-content-center">
+                    <div class="divider w-100"></div>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <div class="row">
+                    <div class="col-12 col-lg-6 p-0">
+                        <div id="education-carouse1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#education-carouse1" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#education-carouse1" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://static.igem.wiki/teams/4249/wiki/education/education-img-01.png"
+                                         class="d-block w-100" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://static.igem.wiki/teams/4249/wiki/education/education-img-02.png"
+                                         class="d-block w-100" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 p-3 d-flex flex-column justify-content-center"
+                         style="background:#e0d7ce;">
+                        <h3 style="font-family: modern-no-20-regular, sans-serif;color: #400732">DNA into the
+                            campus</h3>
+                        <p style="font-size: 14pt;font-family: caslon-bd-bt, sans-serif;">
+                            On July 7th, with the help of Ms.Becky, who is a tour team held an introductory synthetic
+                            biology class for children attending the summer camp. During the presentation, the children
+                            showed a strong interest in synthetic biology, and they also participated in our discussion
+                            vigorously, answering questions such as "what is DNA" and "my understanding of biology".
+                            Through this activity, we helped the children improve their learning and understanding of
+                            synthetic biology, and inspired their biological thinking.
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6 p-3 d-flex flex-column justify-content-center"
+                         style="background:#e0d7ce;">
+                        <h3 style="font-family: modern-no-20-regular, sans-serif;color: #400732">Little
+                            scientist's
+                            dream</h3>
+                        <p style="font-size: 14pt;font-family: caslon-bd-bt, sans-serif;">
+                            We hope this lesson will remain the seed of scientific dream in
+                            their hearts, expecting it to take root and sprout continuously. We also distributed the
+                            team badge to the children as a souvenir. If they can think of this vivid DNA lesson in the
+                            future study, it will be very meaningful.
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6 p-0">
+                        <div id="education-carouse1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#education-carouse1" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#education-carouse1" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://static.igem.wiki/teams/4249/wiki/education/education-img-04.png"
+                                         class="d-block w-100" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://static.igem.wiki/teams/4249/wiki/education/education-img-05.png"
+                                         class="d-block w-100" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="row mt-4">
-    <div class="col">
-        <h2>Inspirations</h2>
-        <hr>
-        <ul>
-            <li><a href="https://2020.igem.org/Team:CCA_San_Diego/Education">2020 CCA San Diego</a></li>
-            <li><a href="https://2020.igem.org/Team:Lambert_GA/Education">2020 Lambert GA</a></li>
-            <li><a href="https://2020.igem.org/Team:Stanford/Education">2020 Stanford</a></li>
-            <li><a href="https://2020.igem.org/Team:Waseda/Education">2020 Waseda</a></li>
-            <li><a href="https://2020.igem.org/Team:Fudan/Education">2020 Fudan</a></li>
-            <li><a href="https://2020.igem.org/Team:Toulouse_INSA-UPS/Education">2020 Toulouse INSA UPS</a></li>
-        </ul>
-    </div>
-</div>
 
 {% endblock %}

@@ -1,21 +1,240 @@
 {% extends "layout.html" %}
 
 {% block title %}Partnership{% endblock %}
-{% block lead %}Collaborate throughout the year with at least one other 2022 iGEM team on a set of shared objectives related to both of your projects.{% endblock %}
+{% block lead %}Collaborate throughout the year with at least one other 2022 iGEM team on a set of shared objectives
+    related to both of your projects.{% endblock %}
 
 {% block page_content %}
+    <style>
+        .partnership-title {
+            position: relative;
+            font-size: 22pt;
+            font-family: caslonltstd-antique, sans-serif;
+            color: #400732
+        }
 
-<div class="row mt-4">
-    <div class="col">
-        <div class="bd-callout bd-callout-info">
-            <h4>Gold Medal Criterion #5</h4>
-            <p>Collaborate throughout the year with at least one other 2022 iGEM team on a set of shared objectives
-                related to both of your projects. This partnership should go beyond a Silver medal collaboration.</p>
-            <hr>
-            <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more
-                information.</p>
+        .partnership-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            background: #C8B186FF;
+            height: 2px;
+            width: 40px;
+        }
+
+        .partnership-text {
+            font-size: 16pt;
+            font-family: caslon-bd-bt, sans-serif;
+            text-align: justify;
+        }
+
+        .partnership-divider {
+            color: #400732;
+            height: 4px;
+            opacity: 1;
+            overflow: visible;
+            position: relative;
+        }
+
+        .partnership-divider::after {
+            display: block;
+            height: 20px;
+            width: 220px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: 'EDUCATION';
+            font-family: caslon-bd-bt, sans-serif;
+            font-style: italic;
+            color: #400732;
+            font-size: 16pt;
+            line-height: 20px;
+            background: #C8B186FF;
+            text-align: center;
+        }
+    </style>
+
+    <div class="w-100">
+        <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-01.png" alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center"><span class="partnership-title">HBUT-China <span style="font-family: sans-serif">-></span> SZPT-CHINA</span></p>
+            </div>
+            <div>
+                <p class="partnership-text">
+                    On July 8th, during the joint exchange meeting of six universities hosted by our team, it was lucky
+                    to find that SZPT-CHINA team wants to synthesize glutathione in Bacillus cereus by synthetic
+                    biology, which has similarity with our team's project. Therefore, based on the common purpose of
+                    synthesizing antioxidant, we reached a further collaborative exchange with the SZPT-CHINA team.
+                </p>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 col-xl-4 my-1">
+                    <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-02.png" alt="">
+                </div>
+                <div class="col-12 col-xl-4 my-1">
+                    <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-03.png" alt="">
+                </div>
+                <div class="col-12 col-xl-4 my-1">
+                    <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-04.png" alt="">
+                </div>
+            </div>
+            <div class="col-12 py-4">
+                <p class="partnership-text">
+                    On July 14th, we met with all SZPT-CHINA team members online and reached an in-depth cooperation
+                    exchange. In this meeting, we again introduced each other's projects in detail, further understood
+                    each other's project details, and made some suggestions and ideas about the allergy of glutathione
+                    for the cosmetic products.
+                </p>
+                <p class="partnership-text">
+                    Due to the epidemic, our iGEM team had a two-year break in the middle, and we always had doubts
+                    about the iGEM competition rules, judging requirements and rule updates. During the meeting, Zhibing
+                    Mai, the captain of SZPT-CHINA team, shared their previous competition experience and some ideas
+                    they wanted to implement, and also carefully answered many doubts for us, and suggested some tips.
+                </p>
+                <p class="partnership-text">
+                    At the end of the meeting, we confirmed our intention to become a partnership and have weekly online
+                    meetings.
+                </p>
+            </div>
+            <div class="col-12">
+                <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-05.png" alt="">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <p class="text-center"><span class="partnership-title" style="display: block;height: 20px"></span></p>
+            </div>
+            <div class="row mt-5">
+                <div class="px-3 py-4" style="background:#C8B186FF;">
+                    <p class="partnership-text text-light text-center">
+                        On August 11th, we joined SZPT-CHINA team to go to Hechi, Guangxi to
+                        inspire children's interest in synthetic biology by drawing. It could help laying the foundation
+                        for the future of synthetic biology.
+                    </p>
+                    <div class="col-12 d-flex justify-content-center">
+                        <img class="col-1" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-06.png" alt="">
+                    </div>
+                    <hr class="partnership-divider">
+                    <div class="row justify-content-around py-2">
+                        <img class="col-5" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-07.png" alt="">
+                        <img class="col-5" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-08.png" alt="">
+                    </div>
+                </div>
+                <div class="my-5">
+                    <p class="partnership-text">
+                        On August 6th, we helped the SZPT-CHINA team to create a poster for the lecture "Something about
+                        Synthetic Biology".
+                    </p>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <img class="col-6" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-09.png" alt="">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <p class="text-center"><span class="partnership-title">Modle</span></p>
+                </div>
+                <div class="col-12 mt-4">
+                    <p class="partnership-text">
+                        In the regular meeting on August 11th, we learned that the SZPT-CHINA team had no idea about
+                        Model, so we shared with them what we had learned about Model, such as growth prediction model
+                        and gene pathway expression model for the project.
+                        In the regular meeting on August 25th, we proposed two ideas, one is the model for impact
+                        factors and the binding of proteins, and the other is the model for the drugs binding to cells.
+                        We also suggested the SZPT-CHINA team to start by finding relevant literature and shared the
+                        modeling software Design Expert.
+                    </p>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <img class="col-10" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-10.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class="col-12 col-xl-6 d-flex my-4">
+                    <div class="d-flex justify-content-center align-self-center">
+                        <div class="col-10 align-self-center">
+                            <p class="text-center"><span class="partnership-title">Contribution</span></p>
+                            <p class="partnership-text mt-4">
+                                We helped SZPT-CHINA team to finish the design of the web interface of the word
+                                book,
+                                hoping
+                                to bring some help to the subsequent iGEMers in professional English.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 d-flex justify-content-center">
+                    <div class="col-10">
+                        <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-11.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="px-3 py-4" style="background:#C8B186FF;">
+                <p class="partnership-text text-light text-center">
+                    On August 6th, SZPT-CHINA team invited us to hold a lecture "The World of Synthetic Biology" with a
+                    total of 300 participants to popularize the knowledge of synthetic biology to university students.
+                    After the meeting, they invited us to participate in a five-university exchange meeting to help us
+                    get more project feedback.
+                </p>
+                <div class="col-12 d-flex justify-content-center">
+                    <img class="col-1" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-06.png" alt="">
+                </div>
+                <hr class="partnership-divider">
+                <div class="row justify-content-center py-3">
+                    <img class="col-10" src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-12.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 col-xl-6 d-none d-xl-block d-flex justify-content-center">
+
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                        <img class="img-fluid"
+                             src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-15.png"
+                             alt="">
+
+                        <img class="img-fluid mt-2"
+                             src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-16.png"
+                             alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-xl-6 d-flex justify-content-center">
+                <div class="col-12 col-xl-8 align-self-center">
+                    <p class="text-center partnership-title">Contribution</p>
+                    <p class="partnership-text">
+                        On July 14th, the SZPT-CHINA team invited us to co-produce a
+                        Chinese-English translation of synthetic biology-related vocabulary book, which was finally
+                        finalized on October 1st, with over 499 words. The SZPT-CHINA team also created a cellphone app
+                        and
+                        a web page, to make it easier to be used. What we implement in this process is the design of the
+                        page.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 d-flex flex-column d-block d-xl-none">
+                <div class="col-12 align-self-center mb-2"><img class="img-fluid"
+                                                                src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-15.png"
+                                                                alt=""></div>
+                <div class="col-12 align-self-center"><img class="img-fluid"
+                                                           src="https://static.igem.wiki/teams/4249/wiki/partnership/partnership-img-16.png"
+                                                           alt=""></div>
+            </div>
         </div>
     </div>
-</div>
-
 {% endblock %}

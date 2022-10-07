@@ -1,41 +1,258 @@
 {% extends "layout.html" %}
 
 {% block title %}Collaborations{% endblock %}
-{% block lead %}Sharing and collaboration are core values of iGEM. We encourage you to reach out and work with other teams on difficult problems that you can more easily solve together.{% endblock %}
+{% block lead %}Sharing and collaboration are core values of iGEM. We encourage you to reach out and work with other
+    teams on difficult problems that you can more easily solve together.{% endblock %}
 
 {% block page_content %}
-
-<div class="row mt-4">
-    <div class="col">
-        <div class="bd-callout bd-callout-info">
-            <h4>Silver Medal Criterion #2</h4>
-            <p>Collaborate with one (or more) 2022 iGEM team(s) in a meaningful way.</p>
-            <hr>
-            <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more
-                information.</p>
-        </div>
-    </div>
-</div>
-
-<div class="row mt-4">
-    <div class="col-lg-6">
-        <h2>Which teams can we work with?</h2>
-        <hr>
-        <p>You can work with any other iGEM 2022 team in the competition. You can also work with non-iGEM research
-            groups, but they do not count towards the iGEM team collaboration silver medal criterion.</p>
-    </div>
-    <div class="col-lg-6">
-        <h2>Some suggestions</h2>
-        <hr>
-        <ul>
-            <li>Improve the function of another team's BioBrick Part or Device</li>
-            <li>Characterize another team's part</li>
-            <li>Debug a construct</li>
-            <li>Model or simulate another team's system</li>
-            <li>Test another team's software</li>
-            <li>Help build and test another team's hardware project</li>
-        </ul>
-    </div>
-</div>
+{#    <div class="overflow-auto article-content">#}
+{#        <ul class="col-4 col-sm-3 col-lg-4 col-xl-4 col-xxl-2"#}
+{#            style="position: fixed;left: 0;top: 60px;">#}
+{#            <li class="border-0 list-unstyled mb-3 collaborations-title  fw-bold">#}
+{#                <span>Preface</span>#}
+{#                <div class="collaborations-title-mark"></div>#}
+{#            </li>#}
+{#            <li class="border-0 list-unstyled mb-3 collaborations-title  fw-bold">#}
+{#                <span>Meeting process</span>#}
+{#                <div class="collaborations-title-mark"></div>#}
+{#                <ul class="fw-normal">#}
+{#                    <li class="collaborations-title ">#}
+{#                        <span>HBUT-China</span>#}
+{#                        <div class="collaborations-title-mark"></div>#}
+{#                    </li>#}
+{#                    <li class="collaborations-title ">#}
+{#                        <span>NJTech_China</span>#}
+{#                        <div class="collaborations-title-mark"></div>#}
+{#                    </li>#}
+{#                    <li class="collaborations-title ">#}
+{#                        <span>UCAS-China</span>#}
+{#                        <div class="collaborations-title-mark"></div>#}
+{#                    </li>#}
+{#                    <li class="collaborations-title ">#}
+{#                        <span>NAU-CHINA</span>#}
+{#                        <div class="collaborations-title-mark"></div>#}
+{#                    </li>#}
+{#                    <li class="collaborations-title ">#}
+{#                        <span>SZPT-China</span>#}
+{#                        <div class="collaborations-title-mark"></div>#}
+{#                    </li>#}
+{#                    <li class="collaborations-title ">#}
+{#                        <span>NJU-China</span>#}
+{#                        <div class="collaborations-title-mark"></div>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </li>#}
+{#            <li class="border-0 list-unstyled mb-3 collaborations-title  fw-bold">#}
+{#                <span>Harvest</span>#}
+{#                <div class="collaborations-title-mark"></div>#}
+{#            </li>#}
+{#            <li class="border-0 list-unstyled mb-3 collaborations-title  fw-bold">#}
+{#                <span>Group photo</span>#}
+{#                <div class="collaborations-title-mark"></div>#}
+{#            </li>#}
+{#        </ul>#}
+{#    </div>#}
+{#    <div class="container article-content">#}
+{#        <div class="row">#}
+{#            <ul class="col-8 col-sm-9 col-lg-9 col-xl-10 offset-3 offset-sm-3 offset-lg-3 offset-xl-2">#}
+{#                <li class="collaborations-content  list-unstyled bg-light p-3 shadow rounded-3 mb-3 bg-light">#}
+{#                    <h3>Preface</h3>#}
+{#                    <hr>#}
+{#                    <p>#}
+{#                        With the concept of iGEM competition to promote the education of synthetic biology discipline as#}
+{#                        well as the goal of competition, openness, collaboration and cooperation, Wuhan United Team#}
+{#                        HBUT-China held an online communication meeting on July 8, hoping to build friendship and#}
+{#                        cooperation with each team in the communication meeting sharing, to promote the competition#}
+{#                        together, and also to solve the problems existing among the teams about the competition. During#}
+{#                        the meeting, each team presented their projects and current progress through PPT presentations,#}
+{#                        and the teams discussed with each other and gave valuable suggestions to each other, and some of#}
+{#                        them had preliminary intentions to cooperate. A total of six iGEM teams participated in this#}
+{#                        meeting, from Wuhan, Nanjing and Shenzhen. The distance and epidemic restrictions did not affect#}
+{#                        any of the teams' enthusiasm for the competition and their desire for communication.#}
+{#                    </p>#}
+{#                    <img src="/static/images/collaborations/collaborations_img.png" class="img-thumbnail col-8" alt="">#}
+{#                </li>#}
+{#                <li class="collaborations-content  list-unstyled bg-light p-3 shadow rounded-3 mb-3 bg-light">#}
+{#                    <h3>Meeting process</h3>#}
+{#                    <hr>#}
+{#                    <h4> 1. Start of the meeting</h4>#}
+{#                    <p>#}
+{#                        First of all, the moderator of Wuhan United Team HBUT-China, Mr. Lan Haiming, made a speech to#}
+{#                        welcome all the participating team members and expressed his hope to learn from each other#}
+{#                        through this exchange meeting, put forward constructive opinions and promote cooperation and#}
+{#                        exchange between the teams.#}
+{#                    </p>#}
+{#                    <img src="/static/images/collaborations/collaborations_img_1.png" class="img-thumbnail col-8"#}
+{#                         alt="">#}
+{#                    <h4> 2. Project introduction</h4>#}
+{#                    <p>#}
+{#                        After the moderator's speech, the exchange will enter the project presentation stage. Each#}
+{#                        team#}
+{#                        had about 25 minutes to introduce their projects, and after the six teams finished sharing,#}
+{#                        they#}
+{#                        entered the free discussion stage.#}
+{#                    </p>#}
+{#                    <ul>#}
+{#                        <li class="mb-5 list-unstyled collaborations-content ">#}
+{#                            <h5 class="border-start border-4 border-info p-2 ps-0 mb-2">#}
+{#                                <span class="bg-white p-2 shadow-sm">Hubei University of Technology (HBUT-China)</span>#}
+{#                            </h5>#}
+{#                            <p>#}
+{#                                The session started with the host team, HBUT-China Wuhan United Team, who shared their#}
+{#                                innovative project "Advanced Synthesis of Ergothioneine, a Powerful Antioxidant in#}
+{#                                Antioxidant#}
+{#                                Alchemy". They used a synthetic biology approach to construct a biosynthetic pathway for#}
+{#                                ergothioneine in brewer's yeast using CRISPR/Cas9 knockout technology, using brewer's#}
+{#                                yeast#}
+{#                                as a#}
+{#                                chassis to help produce ergothioneine.#}
+{#                            </p>#}
+{#                            <img src="/static/images/collaborations/collaborations_img_2.png"#}
+{#                                 class="img-thumbnail col-8" alt="">#}
+{#                        </li>#}
+{#                        <li class="mb-5 list-unstyled collaborations-content ">#}
+{#                            <h5 class="border-start border-4 border-info p-2 ps-0 mb-2">#}
+{#                                <span class="bg-white p-2 shadow-sm">Nanjing University of Technology (NJTech_China)</span>#}
+{#                            </h5>#}
+{#                            <p>#}
+{#                                After a great introduction by the HBUT-China team, NJTech_China Nanjing team introduced#}
+{#                                their#}
+{#                                project "Aerobic modification of interplanetary 'farmers' Clostridium tyrobutyricum".#}
+{#                                Their#}
+{#                                idea#}
+{#                                is to solve the problem of food storage and resupply by establishing bases on planets#}
+{#                                for#}
+{#                                future#}
+{#                                interplanetary travel, and there will be many problems in this process that cannot be#}
+{#                                solved#}
+{#                                now. Ultimately, they chose the anaerobic bacteria Clostridium tyrobutyricum for#}
+{#                                nutritional#}
+{#                                modification, to understand the escape mechanism and purification nature of anaerobic#}
+{#                                organisms#}
+{#                                in oxygen catastrophe events, so that they can lay the foundation for better#}
+{#                                modification of#}
+{#                                other anaerobic microorganisms in the future, and lay the soil foundation for the#}
+{#                                realization of#}
+{#                                interplanetary "farmers" in human history.#}
+{#                            </p>#}
+{#                            <img src="/static/images/collaborations/collaborations_img_3.png"#}
+{#                                 class="img-thumbnail col-8" alt="">#}
+{#                        </li>#}
+{#                        <li class="mb-5 list-unstyled collaborations-content ">#}
+{#                            <h5 class="border-start border-4 border-info p-2 ps-0 mb-2">#}
+{#                                <span class="bg-white p-2 shadow-sm">University of Chinese Academy of Sciences (UCAS-China)</span>#}
+{#                            </h5>#}
+{#                            <p>#}
+{#                                The project of UCAS-China is "Intestinal Treasure - Micro Meal Replacement". The#}
+{#                                expected#}
+{#                                product of the project is that the experimental group provides an engineered lactic acid#}
+{#                                bacteria, and the hardware and software groups design a meal replacement machine and an#}
+{#                                APP#}
+{#                                to#}
+{#                                control the meal replacement machine, then the user needs to prepare milk and sucrose as#}
+{#                                the#}
+{#                                fermenting substance of the engineered bacteria, then their final output is a highly#}
+{#                                customized#}
+{#                                meal replacement shake, that is, the user can control the engineered bacteria in the#}
+{#                                meal#}
+{#                                replacement machine through the APP to get This means that the user can control the#}
+{#                                engineered#}
+{#                                bacteria in the meal replacement machine through the app to get the highly customized#}
+{#                                meal#}
+{#                                replacement shakes they want. They use synthetic biology to solve many of the current#}
+{#                                problems#}
+{#                                of meal replacement, hoping to provide a better idea for modern people's healthy diet#}
+{#                                and#}
+{#                                lifestyle.#}
+{#                            </p>#}
+{#                            <img src="/static/images/collaborations/collaborations_img_4.png"#}
+{#                                 class="img-thumbnail col-8" alt="">#}
+{#                        </li>#}
+{#                        <li class="mb-5 list-unstyled collaborations-content ">#}
+{#                            <h5 class="border-start border-4 border-info p-2 ps-0 mb-2">#}
+{#                                <span class="bg-white p-2 shadow-sm">Nanjing Agricultural University-NAU-CHINA</span>#}
+{#                            </h5>#}
+{#                            <p>#}
+{#                                Detection of chronic hepatitis Chronic hepatitis is an inflammation lasting more than#}
+{#                                six#}
+{#                                months, which can damage the liver and cause cirrhosis, liver failure and liver cancer.#}
+{#                                At#}
+{#                                present, because there is no liver dysfunction and corresponding rapid examination in#}
+{#                                the#}
+{#                                early#}
+{#                                stage of the disease, it is too late to find out. The project is based on the total bile#}
+{#                                acid#}
+{#                                content of urine to realize the preliminary diagnosis of liver diseases at home.#}
+{#                            </p>#}
+{#                            <img src="/static/images/collaborations/collaborations_img_5.png"#}
+{#                                 class="img-thumbnail col-8" alt="">#}
+{#                        </li>#}
+{#                        <li class="mb-5 list-unstyled collaborations-content ">#}
+{#                            <h5 class="border-start border-4 border-info p-2 ps-0 mb-2">#}
+{#                                <span class="bg-white p-2 shadow-sm">Shenzhen polytechnic-SZPT-China</span>#}
+{#                            </h5>#}
+{#                            <p>#}
+{#                                Based on the sharp increase in the scale of skin care industry in 2023, people are#}
+{#                                paying#}
+{#                                more#}
+{#                                and more attention to the demand for skin care. The project is to use Acetobacter#}
+{#                                xylinum to#}
+{#                                synthesize bacterial cellulose as a carrier and reduce glutathione to achieve#}
+{#                                anti-aging,#}
+{#                                whitening, brightening and anti-aging effects.#}
+{#                            </p>#}
+{#                            <img src="/static/images/collaborations/collaborations_img_6.png"#}
+{#                                 class="img-thumbnail col-8" alt="">#}
+{#                        </li>#}
+{#                        <li class="mb-5 list-unstyled collaborations-content ">#}
+{#                            <h5 class="border-start border-4 border-info p-2 ps-0 mb-2">#}
+{#                                <span class="bg-white p-2 shadow-sm">Nanjing University-NJU-China</span>#}
+{#                            </h5>#}
+{#                            <p>#}
+{#                                According to the data of China Health Promotion and Education Association, the number of#}
+{#                                alopecia in China is increasing. Treatment of androgenic alopecia with exosomes of#}
+{#                                genetic#}
+{#                                engineering project. We hope to achieve the following product advantages: exosomes-ideal#}
+{#                                drug#}
+{#                                carrier, direct and safe gene "switch", smearing administration-convenient#}
+{#                                administration#}
+{#                                mode,#}
+{#                                hydrogel-mild drug form, etc.#}
+{#                            </p>#}
+{#                            <img src="/static/images/collaborations/collaborations_img_7.png"#}
+{#                                 class="img-thumbnail col-8" alt="">#}
+{#                        </li>#}
+{#                    </ul>#}
+{##}
+{#                </li>#}
+{#                <li class="collaborations-content  list-unstyled bg-light p-3 shadow rounded-3 mb-3 bg-light">#}
+{#                    <h3>Harvest</h3>#}
+{#                    <hr>#}
+{#                    <p>#}
+{#                        Asking each other's questions has brought a lot of inspiration to each participating team.#}
+{#                        Imitating the form of reply has helped students point out possible problems in reply, and this#}
+{#                        opportunity has helped each participating team to strengthen its next goal. The exchange teams#}
+{#                        have also reached relevant cooperation: Hubei University of Technology and shenzhen polytechnic#}
+{#                        will discuss the application of ergothione in cosmetics, the food track policy of Chinese#}
+{#                        Academy of Sciences, and further cooperation and exchange with hp of Nanjing Agricultural#}
+{#                        University.#}
+{#                    </p>#}
+{#                </li>#}
+{#                <li class="collaborations-content  list-unstyled bg-light p-3 shadow rounded-3 mb-3 bg-light">#}
+{#                    <h3>Group photo</h3>#}
+{#                    <hr>#}
+{#                    <p>#}
+{#                        At the end of the whole exchange meeting, each participant turned on his camera and took a group#}
+{#                        photo together through Tencent platform. Although the COVID-19 epidemic prevented us from#}
+{#                        exchanging and learning offline this year, it did not stop our firm determination to exchange#}
+{#                        and cooperate together and share our projects. Everyone's happy smiles in the photo are enough#}
+{#                        to prove the meaning of this exchange meeting. Finally, I wish everyone good results.#}
+{#                    </p>#}
+{#                    <img src="/static/images/collaborations/collaborations_img_8.png" class="img-thumbnail col-8"#}
+{#                         alt="">#}
+{#                </li>#}
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
 
 {% endblock %}

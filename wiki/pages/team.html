@@ -1,444 +1,479 @@
 {% extends "layout.html" %}
 
-{% block title %}Team{% endblock %}
-{% block lead %}On this page you can introduce your team members, instructors, and advisors.{% endblock %}
+<!--{% block title %}Team{% endblock %}-->
+<!--{% block lead %}On this page you can introduce your team members, instructors, and advisors.{% endblock %}-->
 
 {% block page_content %}
+    <style>
+        .group-photo-area {
+            background-color: #113050;
+        }
 
-<div class="group-photo-area">
-    <div class="container-fluid justify-content-center">
-        <div class="position-relative pt-3 pb-2 d-flex justify-content-center">
-            <img src="https://static.igem.wiki/teams/4249/wiki/group.png" class="img-fluid" alt="">
-            <!--            <img src="https://static.igem.wiki/teams/4249/wiki/合照%20底色.png" class="img-fluid" alt="">-->
-            <!--            <img src="https://static.igem.wiki/teams/4249/wiki/合照纹章边框.png" class="img-fluid group-photo-frame" alt="">-->
-        </div>
+        .group-photo-frame {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99;
+        }
 
-    </div>
-    <div class="w-100 position-relative mb-5s">
-        <!--        <img src="https://static.igem.wiki/teams/4249/wiki/投影.png" class="img-fluid group-photo-projection" alt="">-->
-        <!--        <img src="https://static.igem.wiki/teams/4249/wiki/火漆印.png" class="group-photo-fire-lacquer" alt="">-->
-    </div>
-</div>
-<div class="container mt-5">
-    <div class="row pi">
-        <!--PI-->
-        <div class="single-member col-12 d-flex my-2 py-1">
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-introduction">
-                    <div class="float-start">
-                        <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/pi-dai.png" alt="">
-                        <div class="member-name mt-1">Jun Dai</div>
-                    </div>
-                    Jun Dai, academic backbone of South Lake Scholar of Hubei University of Technology. He has long been
-                    engaged in the research of functional yeast and brewing microorganism. He has presided over one
-                    National Natural Science Foundation of China. And published more than 60 papers, including 49 SCI
-                    and EI. In 2014, he won the second batch of Hubei Provincial Doctoral Service Mission in Huanggang
-                    City and the prize of Hubei University of Technology Jihong Materials Enterprise Outstanding Young
-                    Teacher; in 2014, he guided students to win the 21st "Innovation Cup" extracurricular academic
-                    science and technology works competition of Hubei University of Technology. In 2015, he guided
-                    students to win the third prize of the 10th Hubei Province "Challenge Cup" extracurricular academic
-                    scientific and technological works competition for students; in 2017 and 2018, he guided students to
-                    win the silver prize of the International Genetic Engineering Machine Competition (iGEM); in 2018,
-                    he won the excellent research instructor of Hubei University of Technology; in 2019 Guiding students
-                    to win the Gold Prize of International Genetic Engineering Machine Competition (iGEM), the best
-                    title in the environmental group; Teacher Virtue Pioneer of Hubei University of Technology in 2020;
-                    Excellent Communist Party Member of Hubei University of Technology in 2021. He is the editor of
-                    special issue of Frontiers in Bioengineering and Biotechnology; expert member of Food Hygiene and
-                    Safety Education Committee of China Medical Education Association; member of Frontiers in
-                    Microbiology, Food Bioscience, Current He is a reviewer for Frontiers in Microbiology, Food
-                    Bioscience, Current Microbiology, Food Biotechnology, IJSEM, etc.
-                </div>
+        .single-member {
+            position: relative;
+        }
+
+        .member-img {
+            width: 10rem;
+        }
+
+        .pi .member-img {
+            width: 9rem;
+        }
+
+        .member-name {
+            font-family: "caslongraphique", sans-serif;
+            font-size: 16pt;
+        }
+
+        .pi .member-name {
+            font-family: "caslongraphique", sans-serif;
+            font-size: 16pt;
+            text-align: center;
+        }
+
+        .member-introduction {
+            font-family: "caslon-bd-bt", sans-serif;
+            font-size: 14pt;
+            min-height: 120px;
+            text-align: justify;
+        }
+
+        .member-stamp {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 3rem;
+            width: 3rem;
+        }
+    </style>
+
+
+    <div class="group-photo-area">
+        <div class="container-fluid justify-content-center">
+            <div class="position-relative pt-3 pb-2 d-flex justify-content-center">
+                <img src="https://static.igem.wiki/teams/4249/wiki/team/group.png" class="img-fluid" alt="">
+                <!--            <img src="https://static.igem.wiki/teams/4249/wiki/team/合照%20底色.png" class="img-fluid" alt="">-->
+                <!--            <img src="https://static.igem.wiki/teams/4249/wiki/team/合照纹章边框.png" class="img-fluid group-photo-frame" alt="">-->
             </div>
+
         </div>
-        <div class="single-member col-12 d-flex my-2 py-1">
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-introduction">
-                    <div class="float-start">
-                        <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/pi-yao.png" alt="">
-                        <div class="member-name mt-1">Lan Yao</div>
-                    </div>
-                    Lan Yao has long been engaged in research on functional yeast and biomass energy, etc. She received
-                    her PhD degree in fermentation engineering from Shandong University in June 2011, and joined Hubei
-                    University of Technology in the same year. In 2016, she went to the University of Tennessee, USA to
-                    conduct visiting scholar research. She has presided over one National Natural Science Foundation of
-                    China project, participated in two projects, presided over one National Study Abroad Foundation
-                    project, and six provincial and ministerial projects, with a total research funding of more than 1
-                    million RMB. She has published 25 SCI and EI indexed scientific papers. She is a reviewer for
-                    Frontiers in Energy Research, International Journal of Molecular Sciences, Bioresources, and other
-                    journals.
-                </div>
-            </div>
-        </div>
-        <div class="single-member col-12 d-flex my-2 py-1">
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-introduction">
-                    <div class="float-start">
-                        <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/pi-kevin.png" alt="">
-                        <div class="member-name mt-1">Kevin Schlei</div>
-                    </div>
-                    Kevin Schlei is the founder and developer of Bit Shape Software, LLC, where he creates innovative
-                    synthesizers for mobile devices. His music app TC-11 pioneered new methods of multi-touch musical
-                    performance, and has won accolades by iOS musicians for over a decade. As a musician, Schlei is a
-                    founding member of the Milwaukee Laptop Orchestra (MiLO), the Tablet Orchestra (TORCH), and has
-                    performed extensively in Milwaukee, Chicago, and New York. His multimedia works have been exhibited
-                    in Athens, Brisbane, Utrecht, Shanghai, and Wuhan, and his research has been published in the NIME,
-                    ICMC, and SMC journals. Schlei graduated with his Master's Degree in Music Composition & Theory from
-                    the University of Wisconsin-Milwaukee in 2006. He then joined the staff at UWM where he taught music
-                    composition and technology for 13 years, becoming a Senior Lecturer. In 2019, he left to join the
-                    staff of the Hubei University of Technology in Wuhan, China, where he teaches in the Visual
-                    Communications & Design and Industrial Design schools.
-                </div>
-            </div>
-        </div>
-        <div class="single-member col-12 d-flex my-2 py-1">
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-introduction">
-                    <div class="float-start">
-                        <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/pi-tang.png" alt="">
-                        <div class="member-name mt-1">Jingfeng Tang</div>
-                    </div>
-                    Jingfeng Tang， a professor and doctoral supervisor. Ph.D. in Biology (Biomedical Engineering) from
-                    Wuhan University in 2011; In 2013,. A researcher from Hubei Province who has been funded by the
-                    National Science Foundation for Outstanding Young People and a Scholar of Chutian in Hubei Province;
-                    He is a recipient of the Chenguang Program in Hubei Province and Wuhan City, a standing director of
-                    the International Membrane Protein Health and Disease (CSMB) Committee, a youth director of the
-                    American Association for Cancer Research (AACR), a director of the Trace Elements Branch of the
-                    Chinese Biophysical Society, and a standing director of the Hubei Biological Engineering Society.
-                    Member of the editorial boards of the international journals Cellls (IF:6.66) and Biology (IF:5.26);
-                    Reviewer for Advanced Science, Nat Commun, Autophagy, Cell Rep, Hum Mol Genet, FASEB J and other
-                    magazines. He has presided over more than 10 projects such as the National Natural Science
-                    Foundation, the National Science and Technology Major Projects, the Support Plan of the Ministry of
-                    Science and Technology, the Hubei Provincial Science and Technology Research Project, and the Hubei
-                    Natural Science Foundation Key Projects. He is currently the dean of the School of Biological
-                    Engineering and Food, the director of the "111" Wisdom Introduction Base for Cell Regulation and
-                    Molecular Drugs of the Ministry of Science and Technology/Ministry of Education, and the director of
-                    the Hubei Provincial Engineering Research Center for Genetic Diagnosis and Personalized Tumor
-                    Treatment.
-                </div>
-            </div>
+        <div class="w-100 position-relative mb-5s">
+            <!--        <img src="https://static.igem.wiki/teams/4249/wiki/team/投影.png" class="img-fluid group-photo-projection" alt="">-->
+            <!--        <img src="https://static.igem.wiki/teams/4249/wiki/team/火漆印.png" class="group-photo-fire-lacquer" alt="">-->
         </div>
     </div>
-    <div class="row stu">
-        <!--实验组-->
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/lab-wwy.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Wenyue Wang</div>
-                <div class="member-introduction">
-                    I'm one of the student leaders of HBUT-China team and mainly responsible for experimental part. I
-                    hope that with the joint efforts of everyone, our project can achieve good results.
+    <div class="container mt-5">
+        <div class="row pi">
+            <!--PI-->
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-introduction">
+                        <div class="float-start">
+                            <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/pi-dai.png"
+                                 alt="">
+                            <div class="member-name mt-1">Jun Dai</div>
+                        </div>
+                        Jun Dai has long been engaged in the research of functional yeast and brewing microorganism. He
+                        has
+                        presided over one National Natural Science Foundation of China. And published more than 60
+                        papers,
+                        including 49 SCI and EI.
+                    </div>
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-lab.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/lab-wwx.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Wenxin Wang</div>
-                <div class="member-introduction">
-                    I'm the group leader of the experimental group. Participating in iGEM, I learned many experimental
-                    skills🔬 and made a lot of friends, which makes me
-                    very grateful. I hope that through our joint efforts, we can get a good result.
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-introduction">
+                        <div class="float-start">
+                            <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/pi-yao.png"
+                                 alt="">
+                            <div class="member-name mt-1">Lan Yao</div>
+                        </div>
+                        Lan Yao has long been engaged in research on functional yeast and biomass energy, etc. Has
+                        published
+                        25 SCI and EI indexed scientific papers. Is a reviewer for Frontiers in Energy Research,
+                        International Journal of Molecular Sciences, Bioresources, and other journals.
+                    </div>
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-lab.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/lab-wtx.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Tongxin Wang</div>
-                <div class="member-introduction">
-                    I belong to the experimental group. My personality is lively and cheerful. Out of love🐋 I chose to
-                    major in biotechnology, which is one of the reasons I joined this family. I hope I can get along
-                    well with others in the future and finish this year's competition together!
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-introduction">
+                        <div class="float-start">
+                            <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/pi-kevin.png"
+                                 alt="">
+                            <div class="member-name mt-1">Kevin Schlei</div>
+                        </div>
+                        Kevin Schlei is the founder and developer of Bit Shape Software, LLC, where he creates
+                        innovative
+                        synthesizers for mobile devices. His music app TC-11 pioneered new methods of multi-touch
+                        musical
+                        performance, and has won accolades by iOS musicians for over a decade.
+                    </div>
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-lab.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/lab-wx.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Xi Wang</div>
-                <div class="member-introduction">
-                    I'm a member of the experimental group, believing that we should grasp the youth to seize the moment
-                    is to create wealth. In this competition, I will enjoy the course of study with lots of great
-                    people, who are majored in different specialties🫶.
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-introduction">
+                        <div class="float-start">
+                            <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/pi-tang.png"
+                                 alt="">
+                            <div class="member-name mt-1">Jingfeng Tang</div>
+                        </div>
+                        Jingfeng Tang，a professor and doctoral supervisor. He has presided over more than 10 projects
+                        such
+                        as the National Natural Science Foundation, the National Science and Technology Major Projects,
+                        the
+                        Support Plan of the Ministry of Science and Technology, the Hubei Provincial Science and
+                        Technology
+                        Research Project, and the Hubei Natural Science Foundation Key Projects.
+                    </div>
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-lab.png" alt="">
-            </div>
         </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/lab-xxy.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Xinyi Xia</div>
-                <div class="member-introduction">
-                    I am a member of the experimental group. I am responsible for doing basic experiments. I hope I can
-                    improve myself and make progress together with everyone.
+        <div class="row stu">
+            <!--实验组-->
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/lab-wwy.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Wenyue Wang</div>
+                    <div class="member-introduction">
+                        I'm one of the student leaders of HBUT-China team and mainly responsible for experimental part.
+                        I
+                        hope that with the joint efforts of everyone, our project can achieve good results.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-lab.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-lab.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/lab-ych.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Changhan Yu</div>
-                <div class="member-introduction">
-                    I major in bioengineering and focus on the experiment. Working with everyone here is of great
-                    fun. What I want is everyone has a nice time and all efforts could pay off.
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/lab-wwx.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Wenxin Wang</div>
+                    <div class="member-introduction">
+                        I'm the group leader of the experimental group. Participating in iGEM, I learned many
+                        experimental
+                        skills🔬 and made a lot of friends, which makes me
+                        very grateful. I hope that through our joint efforts, we can get a good result.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-lab.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-lab.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/lab-fjj.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Junjun Feng</div>
-                <div class="member-introduction">
-                    I am a member of lab group. I have great interest in synthetic biology because it can improve our
-                    life and repair our ecological environment. I believe this competition will bring me an
-                    unforgettable experience.
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/lab-wtx.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Tongxin Wang</div>
+                    <div class="member-introduction">
+                        I belong to the experimental group. My personality is lively and cheerful. Out of love🐋 I chose
+                        to
+                        major in biotechnology, which is one of the reasons I joined this family. I hope I can get along
+                        well with others in the future and finish this year's competition together!
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-lab.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-lab.png" alt="">
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/lab-wx.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Xi Wang</div>
+                    <div class="member-introduction">
+                        I'm a member of the experimental group, believing that we should grasp the youth to seize the
+                        moment
+                        is to create wealth. In this competition, I will enjoy the course of study with lots of great
+                        people, who are majored in different specialties🫶.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-lab.png" alt="">
+                </div>
             </div>
-        </div>
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/lab-xxy.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Xinyi Xia</div>
+                    <div class="member-introduction">
+                        I am a member of the experimental group. I am responsible for doing basic experiments. I hope I
+                        can
+                        improve myself and make progress together with everyone.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-lab.png" alt="">
+                </div>
+            </div>
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/lab-ych.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Changhan Yu</div>
+                    <div class="member-introduction">
+                        I major in bioengineering and focus on the experiment. Working with everyone here is of great
+                        fun. What I want is everyone has a nice time and all efforts could pay off.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-lab.png" alt="">
+                </div>
+            </div>
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/lab-fjj.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Junjun Feng</div>
+                    <div class="member-introduction">
+                        I am a member of lab group. I have great interest in synthetic biology because it can improve
+                        our
+                        life and repair our ecological environment. I believe this competition will bring me an
+                        unforgettable experience.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-lab.png" alt="">
+                </div>
+            </div>
 
-        <!--美工组-->
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/art-lyl.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Yilin Lu</div>
-                <div class="member-introduction">
-                    I'm the leader of the art team. It's a great honor to join HBUT-China. I will work hard with
-                    everyone in the future. Let's refuel together!
+            <!--美工组-->
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/art-lyl.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Yilin Lu</div>
+                    <div class="member-introduction">
+                        I'm the leader of the art team. It's a great honor to join HBUT-China. I will work hard with
+                        everyone in the future. Let's refuel together!
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-art.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-art.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/art-cn.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Nuo Cheng</div>
-                <div class="member-introduction">
-                    My English name is Olivia. In this team, I am mainly responsible for the art work. It is a great
-                    pleasure to work together with team members. I have learned a lot of knowledge in this team and
-                    learned about the integration of different disciplines.
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/art-cn.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Nuo Cheng</div>
+                    <div class="member-introduction">
+                        My English name is Olivia. In this team, I am mainly responsible for the art work. It is a great
+                        pleasure to work together with team members. I have learned a lot of knowledge in this team and
+                        learned about the integration of different disciplines.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-art.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-art.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/art-fml.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Meilin Feng</div>
-                <div class="member-introduction">
-                    I'm part of the art team, working with everyone to assist in the completion of the video. It is a
-                    pleasure to join this big team and hope that we can get a good harvest. 💪
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/art-fml.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Meilin Feng</div>
+                    <div class="member-introduction">
+                        I'm part of the art team, working with everyone to assist in the completion of the video. It is
+                        a
+                        pleasure to join this big team and hope that we can get a good harvest. 💪
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-art.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-art.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/art-laq.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Anqi Liao</div>
-                <div class="member-introduction">
-                    I am mainly responsible for web design. Joining HBUT-China is part of my
-                    vision for the future, and I will devote myself to contribute to our team🪄.
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/art-laq.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Anqi Liao</div>
+                    <div class="member-introduction">
+                        I am mainly responsible for web design. Joining HBUT-China is part of my
+                        vision for the future, and I will devote myself to contribute to our team🪄.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-art.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-art.png" alt="">
-            </div>
-        </div>
 
-        <!--宣传组-->
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/hp-lhm.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Haiming Lan</div>
-                <div class="member-introduction">
-                    I am one of the leader of the Human Practices. I am very happy to join the team. I hope to
-                    constantly improve my ability, give full play to my value and meet more excellent people through
-                    the competition.
+            <!--宣传组-->
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/hp-lhm.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Haiming Lan</div>
+                    <div class="member-introduction">
+                        I am one of the leader of the Human Practices. I am very happy to join the team. I hope to
+                        constantly improve my ability, give full play to my value and meet more excellent people through
+                        the competition.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-hp.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-hp.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/hp-hyj.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Yujiao Huang</div>
-                <div class="member-introduction">
-                    I am one of the HP group. I'm more than glad to participate in this grand
-                    gathering. I would like to take good advantage of every opportunity to approve myself and make
-                    progress with other friends.
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/hp-hyj.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Yujiao Huang</div>
+                    <div class="member-introduction">
+                        I am one of the HP group. I'm more than glad to participate in this grand
+                        gathering. I would like to take good advantage of every opportunity to approve myself and make
+                        progress with other friends.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-hp.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-hp.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/hp-lqt.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Qianting Liu</div>
-                <div class="member-introduction">
-                    I'm a member of HP group. My major is food science and engineering.I have a lively personality, like
-                    reading and music, treat people sincerely and full of enthusiasm. I will work hard for what I want.
-                    I'm glad to join HBUT—China!
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/hp-lqt.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Qianting Liu</div>
+                    <div class="member-introduction">
+                        I'm a member of HP group. My major is food science and engineering.I have a lively personality,
+                        like
+                        reading and music, treat people sincerely and full of enthusiasm. I will work hard for what I
+                        want.
+                        I'm glad to join HBUT—China!
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-hp.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-hp.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/hp-wj.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Jing Wang</div>
-                <div class="member-introduction">
-                    I am a member of HP group.I am honored to join HBUT-China. In the future, I will do my best to
-                    complete our project with everyone.
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/hp-wj.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Jing Wang</div>
+                    <div class="member-introduction">
+                        I am a member of HP group.I am honored to join HBUT-China. In the future, I will do my best to
+                        complete our project with everyone.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-hp.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-hp.png" alt="">
-            </div>
-        </div>
 
-        <!--建模组-->
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/mod-hjn.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Junni Huang</div>
-                <div class="member-introduction">
-                    I am a member of the modeling team, majoring in statistics and interested in biostatistics. I will
-                    work hard to complete this competition with my teammates.
+            <!--建模组-->
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/mod-hjn.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Junni Huang</div>
+                    <div class="member-introduction">
+                        I am a member of the modeling team, majoring in statistics and interested in biostatistics. I
+                        will
+                        work hard to complete this competition with my teammates.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-mod.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-mod.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/mod-lx.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Xin Liang</div>
-                <div class="member-introduction">
-                    I am a member of the modeling team, and I love music🎶. It is a great honor to join HBUT-China, and
-                    I hope to make joint efforts and progress with all team members!
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/mod-lx.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Xin Liang</div>
+                    <div class="member-introduction">
+                        I am a member of the modeling team, and I love music🎶. It is a great honor to join HBUT-China,
+                        and
+                        I hope to make joint efforts and progress with all team members!
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-mod.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-mod.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/mod-tjw.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Jiawen Tan</div>
-                <div class="member-introduction">
-                    I'm a member of the modeling team. I am curious about all things and outgoing. I like dancing,
-                    painting and these hobbies make me creative. It is my honor to join the HBUT-China and want to go
-                    forward together!
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/mod-tjw.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Jiawen Tan</div>
+                    <div class="member-introduction">
+                        I'm a member of the modeling team. I am curious about all things and outgoing. I like dancing,
+                        painting and these hobbies make me creative. It is my honor to join the HBUT-China and want to
+                        go
+                        forward together!
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-mod.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-mod.png" alt="">
-            </div>
-        </div>
 
-        <!--网页组-->
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/web-lty.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Tianyi Liang</div>
-                <div class="member-introduction">
-                    I am the leader of web group. I am interested in Bioinformatics🧬. I will always learn and research
-                    the things that interest me. I will work with my partners
-                    to my best of my ability.
+            <!--网页组-->
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/web-lty.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Tianyi Liang</div>
+                    <div class="member-introduction">
+                        I am the leader of web group. I am interested in Bioinformatics🧬. I will always learn and
+                        research
+                        the things that interest me. I will work with my partners
+                        to my best of my ability.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-web.png" alt="">
                 </div>
             </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-web.png" alt="">
-            </div>
-        </div>
-        <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
-            <div class="align-self-start">
-                <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/web-sy.png" alt="">
-            </div>
-            <div class="d-flex flex-column justify-content-start">
-                <div class="member-name mt-1">Yang Sun</div>
-                <div class="member-introduction">
-                    I am a member of web group, like to write code and have a passion for computer languages. Hope to
-                    finish an excellent work with everyone.
+            <div class="single-member col-12 col-md-12 col-lg-6 col-xl-6 d-flex my-2 py-1">
+                <div class="align-self-start">
+                    <img class="member-img" src="https://static.igem.wiki/teams/4249/wiki/team/web-sy.png" alt="">
                 </div>
-            </div>
-            <div class="member-stamp user-select-none">
-                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/stamp-web.png" alt="">
+                <div class="d-flex flex-column justify-content-start">
+                    <div class="member-name mt-1">Yang Sun</div>
+                    <div class="member-introduction">
+                        I am a member of web group, like to write code and have a passion for computer languages. Hope
+                        to
+                        finish an excellent work with everyone.
+                    </div>
+                </div>
+                <div class="member-stamp user-select-none">
+                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/team/stamp-web.png" alt="">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}

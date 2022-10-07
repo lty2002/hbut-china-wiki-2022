@@ -1,79 +1,451 @@
 {% extends "layout.html" %}
 
 {% block title %}Human Practices{% endblock %}
-{% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
+{% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for
+    the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
 
 {% block page_content %}
+    <style>
+        .question-1-con {
+            position: relative;
+            height: 500px;
+            width: 420px;
+            background-image: url('https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-02.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
 
-<div class="row mt-4">
-    <div class="col">
-        <div class="bd-callout bd-callout-info">
-            <h4>Silver Medal Criterion #3</h4>
-            <p>Explain how you have determined your work is responsible and good for the world.</p>
-            <hr>
-            <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more
-                information.</p>
+        .question-1-text {
+            position: absolute;
+            font-size: 18pt;
+            width: 300px;
+            left: 100px;
+            bottom: 0;
+            font-family: caslon-bd-bt, sans-serif;
+            color: #400732;
+        }
+
+        .question-2-con {
+            position: relative;
+            height: 500px;
+            width: 420px;
+            background-image: url('https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-16.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .question-2-text {
+            position: absolute;
+            font-size: 18pt;
+            width: 340px;
+            left: 0;
+            bottom: 40px;
+            font-family: caslon-bd-bt, sans-serif;
+            color: #400732;
+        }
+
+        .question-3-con {
+            position: relative;
+            height: 500px;
+            width: 420px;
+            background-image: url('https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-18.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .question-3-text {
+            position: absolute;
+            font-size: 18pt;
+            width: 340px;
+            left: 100px;
+            bottom: 10px;
+            font-family: caslon-bd-bt, sans-serif;
+            color: #400732;
+        }
+
+        .human-practices-divider {
+            color: #400732;
+            height: 4px;
+            opacity: 1;
+            overflow: visible;
+            position: relative;
+        }
+
+        .human-practices-divider::after {
+            display: block;
+            height: 20px;
+            width: 220px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: 'CONCLUSION';
+            font-family: caslon-bd-bt, sans-serif;
+            font-style: italic;
+            color: #400732;
+            font-size: 16pt;
+            line-height: 20px;
+            background: #f6efe7;
+            text-align: center;
+        }
+    </style>
+
+    <div class="w-100">
+        <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-01.png"
+             alt="">
+    </div>
+
+    <div class="container">
+        {#  第一部分  #}
+        <div class="row">
+            <div class="col-12 col-xl-4 offset-xl-1">
+                <div class="question-1-con d-none d-xl-block">
+                    <p class="question-1-text">
+                        What ideas did you come up with during the brainstorming session? How did you come up with these
+                        ideas?
+                    </p>
+                </div>
+                <p class="d-block d-xl-none mt-3"
+                   style="font-size: 18pt;font-family: caslon-bd-bt, sans-serif;color: #400732;">
+                    Ⅰ. What idea did you come up with during the brainstorming session? How did you come up with these
+                    ideas?
+                </p>
+            </div>
+            <div class="col-12 col-xl-4 offset-xl-2 mt-xl-5 mt-3"
+                 style="background:#E0D7CC;font-family: caslon-bd-bt, sans-serif;box-shadow: 4px 4px 4px #ccc">
+                <div class="d-flex flex-column">
+                    <div class="align-self-center d-flex justify-content-center col-5 mb-2">
+                        <img class="img-fluid"
+                             src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-03.png"
+                             alt="">
+                    </div>
+                    <div class="align-self-center">
+                        <p class="text-center" style="font-size: 16pt">
+                            The instructor asked us to learn more about the Wiki website design of the last three years'
+                            winning projects, etc., and to add highlights to the basic boards by learning from the
+                            designs of the gold medal projects. So each member chose an area of interest to study
+                            previous yearxs' award-winning projects and get new ideas from them.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <hr class="col-3" style="height: 4px;color: #C8B186;opacity: 1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-xl-5 d-flex justify-content-center my-1">
+                <img class="img-fluid"
+                     src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-04.png" alt="">
+            </div>
+            <div class="col-6 col-xl-5 offset-xl-1 my-2 d-flex justify-content-center">
+                <img class="img-fluid"
+                     src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-09.png" alt="">
+            </div>
+            <div class="col-12 col-xl-5 d-flex justify-content-center">
+                <p class="col-10 align-self-center" style="font-size: 16pt;font-family: caslon-bd-bt, sans-serif">
+                    Ultimately, the idea we chose was to achieve high yields of ergothioneine in brewer's yeast. This
+                    project could provide a more sustainable, cost effective and efficient way to manufacture EGT, which
+                    will benefit our life and health.
+                </p>
+            </div>
+            <div class="col-12 col-xl-5 offset-xl-2 my-xl-2 d-flex justify-content-center">
+                <img class="img-fluid"
+                     src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-08.png" alt="">
+            </div>
+
         </div>
 
-        <div class="bd-callout bd-callout-info">
-            <h4>Gold Medal Criterion #1</h4>
-            <p>Demonstrate how your team responded to your human practices reflections, research, and/or engagement. You
-                should show how your activities impacted your project purpose, design, and/or execution. </p>
-            <hr>
-            <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more
-                information.</p>
+        {#  第二部分(大屏)  #}
+        <div class="d-none d-xl-block">
+            <div class="row">
+                <div class="col-6">
+                    <div class="col-12 p-3"
+                         style="background:#E0D7CC;margin-top: 200px;font-family: caslon-bd-bt, sans-serif;box-shadow: 4px 4px 4px #ccc">
+                        <div class="d-flex flex-column">
+                            <div class="align-self-center col-5 mb-2">
+                                <img class="img-fluid"
+                                     src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-03.png"
+                                     alt="">
+                            </div>
+                            <div class="align-self-center">
+                                <p class="text-center" style="font-size: 16pt">
+                                    We can achieve EGT production in yeast. We designed a questionnaire about
+                                    biosynthetic products and hope to get some valuable feedback from people of
+                                    different age levels. In addition, we conducted campus interviews to investigate the
+                                    views and attitudes of students from different majors towards gene editing. The
+                                    feedback from these target populations helped us to better assess environmental,
+                                    social and ethical values when designing our project.
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <hr class="col-3" style="height: 4px;color: #C8B186;opacity: 1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-11 offset-1" style="margin-top: 200px;">
+                        <div class="bg-light">
+                            <img class="img-fluid"
+                                 src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-11.svg"
+                                 alt="">
+                            <div class="text-center">
+                                <p class="py-2">Attention to the safety of the product raw materials</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 mt-3">
+                    <div class="col-8 offset-4">
+                        <div class="question-2-con d-none d-xl-block">
+                            <p class="question-2-text">
+                                What values - environmental, social, ethical, scientific or others do you have in mind
+                                when designing your projects?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-5">
+                        <div class="bg-light">
+                            <img class="img-fluid"
+                                 src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-10.svg"
+                                 alt="">
+                            <div class="text-center">
+                                <p class="py-2">Age frequency distribution</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 offset-1 mt-">
+                        <div class="bg-light px-3 py-1">
+                            <img class="img-fluid"
+                                 src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-12.svg"
+                                 alt="">
+                            <div class="text-center">
+                                <p>Willing to accept food-grade additives</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="bd-callout bd-callout-info">
-            <h4>Best Integrated Human Practices Special Prize</h4>
-            <p>To compete for the this prize, please describe your work on this page and also fill out the description
-                on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-            <p>How does your project affect society and how does society influence the direction of your project? How
-                might ethical considerations and stakeholder input guide your project purpose and design and the
-                experiments you conduct in the lab? How does this feedback enter into the process of your work all
-                through the iGEM competition? Document a thoughtful and creative approach to exploring these questions
-                and how your project evolved in the process to compete for this award!</p>
-            <hr>
-            <p>Please see the <a href="https://competition.igem.org/judging/awards">2022 Awards Page</a> for more
-                information.</p>
+        {#  第二部分(小屏)  #}
+        <div class="d-block d-xl-none mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <p style="font-size: 18pt;font-family: caslon-bd-bt, sans-serif;color: #400732;">
+                        Ⅱ. What values-environmental, social, ethical, scientific or others - do you have in mind
+                        when designing your projects?
+                    </p>
+                </div>
+                <div class="col-12 p-3 mt-2"
+                     style="background:#E0D7CC;font-family: caslon-bd-bt, sans-serif;box-shadow: 4px 4px 4px #ccc">
+                    <div class="d-flex flex-column">
+                        <div class="align-self-center col-5 mb-2 d-flex justify-content-center">
+                            <img class="img-fluid"
+                                 src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-03.png"
+                                 alt="">
+                        </div>
+                        <div class="align-self-center">
+                            <p class="text-center" style="font-size: 16pt">
+                                We can achieve EGT production in yeast. We designed a questionnaire about
+                                biosynthetic products and hope to get some valuable feedback from people of
+                                different age levels. In addition, we conducted campus interviews to investigate the
+                                views and attitudes of students from different majors towards gene editing. The
+                                feedback from these target populations helped us to better assess environmental,
+                                social and ethical values when designing our project.
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <hr class="col-3" style="height: 4px;color: #C8B186;opacity: 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 d-flex justify-content-center">
+                    <div class="bg-light w-100">
+                        <img class="img-fluid"
+                             src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-11.svg"
+                             alt="">
+                        <div class="text-center">
+                            <p class="pt-1">Attention to the safety of the product raw materials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 d-flex justify-content-center">
+                    <div class="bg-light w-100">
+                        <img class="img-fluid"
+                             src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-10.svg"
+                             alt="">
+                        <div class="text-center">
+                            <p class="pt-1">Age frequency distribution</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-2 d-flex justify-content-center">
+                    <div class="bg-light w-100 d-flex flex-column">
+                        <img class="img-fluid col-6 align-self-center"
+                             src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-12.svg"
+                             alt="">
+                        <div class="text-center">
+                            <p class="pt-1">Willing to accept food-grade additives</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="margin-top: 100px">
+            <div class="col-11 px-3 py-4" style="background: #C8B186;">
+                <p class="text-center" style="font-size: 16pt;font-family:caslon-bd-bt,sans-serif; color: #ffffff;">
+                    The safety of gene editing is a major concern. Through the questionnaire, we found that people's
+                    concern about the safety of the material was high reaching nearly 87%. Most people considered the
+                    risks of gene editing to human health and the environment. Ethical issues of gene editing can affect
+                    our choice of subjects. The future of gene editing is highly uncertain. Therefore, the application
+                    and development of gene editing technology must be taken seriously.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="col-12 d-flex justify-content-center">
+                    <img class="col-1 img-fluid"
+                         src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-17.png"
+                         alt="">
+                </div>
+                <hr class="human-practices-divider">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <p style="font-size: 16pt;font-family: caslon-bd-bt, sans-serif;">
+                    We have conducted a series of campus outreach activities targeting university students. College
+                    students of different majors have different perceptions and attitudes toward genetic modification
+                    and cell fusion. Some college students think that GM will violate ethics and morality, make human
+                    beings lose the meaning of life, and even threaten the long-term development of human beings. And
+                    some college students believe that scientists should figure out the advantages of GM as soon as
+                    possible, so that human beings can discard the stereotypical concepts and live in harmony with GM.
+                    Since our team project involved gene editing and other manipulations, we also discussed the safety
+                    of such genetic modifications in our later science education.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12 col-xl-6 offset-xl-0">
+                <div class="col-12 col-xl-8">
+                    <div class="question-3-con d-none d-xl-block">
+                        <p class="question-3-text">
+                            What community resources did you consult to ensure that they were of appropriate value in
+                            the context of your project?
+                        </p>
+                    </div>
+                </div>
+                <div class="d-block d-xl-none">
+                    <p style="font-size: 18pt;font-family: caslon-bd-bt, sans-serif;color: #400732;">
+                        Ⅲ. What community resources did you consult to ensure that they were of appropriate value in the
+                        context of your project?
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6 align-self-center">
+                <div class="col-12 p-3"
+                     style="background:#103050;box-shadow: 4px 4px 5px #666666">
+                    <div class="d-flex flex-column">
+                        <div class="align-self-center col-5 mb-2 d-flex justify-content-center">
+                            <img class="img-fluid"
+                                 src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-03.png"
+                                 alt="">
+                        </div>
+                        <div class="align-self-center">
+                            <p class="text-center"
+                               style="font-size: 16pt;font-family: caslon-bd-bt, sans-serif;color: #C8B186">
+                                Our team contacted Yichang Anqi Yeast Co., Ltd.and came to their industrial park to
+                                visit and learn about the industrial methods of yeast and the direction of prospective
+                                landings.
+                                Mr. Qin Xianwu, Senior Engineer of Anqi Yeast, discussed with us the recent research
+                                directions in biochemical and food industries; meanwhile we presented our project to our
+                                engineering team.
+
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="col-3 text-center my-2"
+                                 style="background:#C8B186;color: #103050;font-size: 16pt;font-family: modern20-bt, sans-serif;border-radius: 4px;">
+                                A1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-12 col-xl-6 d-flex justify-content-center">
+                <img class="img-fluid"
+                     src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-13.png" alt="">
+            </div>
+            <div class="col-12 col-xl-6 d-flex flex-column justify-content-center"
+                 style="font-family: caslon-bd-bt, sans-serif;font-size: 16pt">
+                <div class="col-10 align-self-center mt-2">
+                    <p>
+                        1. About the prospect of landing the project, Mr. Qin Xianwu(Senior Engineer of Anqi Yeast )
+                        said that EGT is not only a health product, but also widely used in the cosmetic industry. He
+                        said that since we go food track, food grade safety stuff can also be involved in other fields,
+                        and it is more recommended to develop cosmetics, such as facial masks, etc. To open up new
+                        horizons and directions for our project.
+                    </p>
+                    <p>
+                        2. He said that good project application should do a good market research, and suggested us to
+                        do more recent feasibility research from both food and cosmetic.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 200px;">
+            <div class="col-12 d-flex justify-content-center">
+                <div class="col-2 text-center" style="background:#103050;border-radius: 4px">
+                    <div style="color: #ffffff;font-size: 16pt;font-family: modern20-bt, sans-serif">A2</div>
+                </div>
+            </div>
+            <div class="text-center" style="font-family: caslon-bd-bt, sans-serif;font-size: 16pt">Expert Zhang Yi</div>
+
+            <div class="col-12 mt-5 d-flex flex-column justify-content-center"
+                 style="font-family: caslon-bd-bt, sans-serif;font-size: 16pt">
+                <p>
+                    1. In terms of product development, he said that EGT has strong antioxidant properties and is a
+                    food grade raw material, so it can be involved in other fields. It is suggested to develop the field
+                    of nut and fruit preservation or animal feed, because the threshold of this direction is low and
+                    easier to apply in real life, which opens up new horizons and directions for our project.
+                </p>
+                <p>
+                    2. He said that biosynthetic food additives in the domestic market is widely used, depending on
+                    production costs, production technology, product stability and other aspects, but also need to meet
+                    the actual national conditions and domestic dietary habits.
+                </p>
+                <p>
+                    3. It has been approved by the European Food Safety Authority and the U.S. Food and Drug
+                    Administration. He said the substance has good prospects for development in China, where domestic
+                    policies mainly consider intellectual property rights, economic costs and trade barriers.
+                </p>
+                <p>
+                    4. When it comes to the application of the product, he said that animal testing should first be
+                    conducted to ensure that the substance works and is non-toxic and non-hazardous, and that it is also
+                    necessary to consider whether the substance has an impact on the environment.
+                </p>
+            </div>
+
+            <div class="row mt-4 justify-content-center">
+                <div class="col-10 col-xl-6 align-self-center my-1 d-flex justify-content-center">
+                    <img class="img-fluid"
+                         src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-14.png"
+                         alt="">
+                </div>
+                <div class="col-10 col-xl-6 align-self-center my-1 d-flex justify-content-center">
+                    <img class="img-fluid"
+                         src="https://static.igem.wiki/teams/4249/wiki/human-practices/human-practices-img-15.png"
+                         alt="">
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-<div class="row mt-4">
-    <div class="col-lg-8">
-        <h2>Overview</h2>
-        <hr>
-        <p>At iGEM we believe societal considerations should be upfront and integrated throughout the design and
-            execution of synthetic biology projects. “Human Practices” refers to iGEM teams' efforts to actively
-            consider how the world affects their work and their work affects the world. Through your Human Practices
-            activities, your team should demonstrate how you have thought carefully and creatively about whether your
-            project is responsible and good for the world. We invite you to explore issues relating (but not limited) to
-            the ethics, safety, security, and sustainability of your project, and to show how this exploration feeds
-            back into your project purpose, design, and execution.</p>
-        <p>Please note you can compete for the Silver Medal criterion #3, Gold Medal criterion #1 and the Best
-            Integrated Human Practices prize with this page.</p>
-        <p>For more information, please see the <a
-                href="https://responsibility.igem.org/human-practices/what-is-human-practices">Human Practices Hub</a>.
-        <p>On this page, your team should document all of your Human Practices work and activities. You should write
-            about the Human Practices topics you considered in your project, document any activities you conducted to
-            explore these topics (such as engaging with experts and stakeholders), describe why you took a particular
-            approach (including referencing any work you built upon), and explain if and how you integrated takeaways
-            from your Human Practices work back into your project purpose, design and/or execution.</p>
-    </div>
-    <div class="col-lg-4">
-        <h2>Inspirations</h2>
-        <hr>
-        <ul>
-            <li><a href="https://2019.igem.org/Team:Thessaly/Human_Practices">2019 Thessaly</a></li>
-            <li><a href="https://2019.igem.org/Team:Linkoping_Sweden/Human_Practices">2019 Linkoping Sweden</a></li>
-            <li><a href="https://2019.igem.org/Team:FDR-HB_Peru/Human_Practices">2019 FDR HB Peru</a></li>
-            <li><a href="https://2020.igem.org/Team:William_and_Mary/Human_Practices">2020 William and Mary</a></li>
-            <li><a href="https://2020.igem.org/Team:Rochester/Human_Practices">2020 Rochester</a></li>
-            <li><a href="https://2020.igem.org/Team:Leiden/Human_Practices">2020 Leiden</a></li>
-            <li><a href="https://2020.igem.org/Team:Baltimore_BioCrew/Human_Practices">2020 Baltimore BioCrew</a></li>
-        </ul>
-    </div>
-</div>
 
 {% endblock %}
