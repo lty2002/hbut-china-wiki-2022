@@ -6,8 +6,13 @@
 
 {% block page_content %}
     <style>
-        .pdf-frame {
-            width: 100%;
+        .model-container {
+            background: #e0d7cc;
+        }
+
+        .model-container .pdf-frame {
+            width: 90%;
+            margin: 2rem;
             height: 120vh;
         }
     </style>
@@ -16,7 +21,7 @@
         <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/model/model-materials-00.png" alt="">
     </div>
 
-    <div class="container">
+    <div class="container model-container d-flex justify-content-center">
         <iframe class="pdf-frame" src="https://static.igem.wiki/teams/4249/wiki/model/model.pdf"
                 frameborder="0"></iframe>
     </div>

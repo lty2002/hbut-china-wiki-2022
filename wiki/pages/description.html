@@ -4,182 +4,25 @@
 {% block lead %}Describe how and why you chose your iGEM project.{% endblock %}
 
 {% block page_content %}
-<script src="{{  url_for('static', filename = 'jquery-3.6.0.js')  }}"></script>
-<script src="{{  url_for('static', filename = 'common.js')  }}"></script>
-<div class="article-content">
-    <ul class="col-4 col-sm-3 col-lg-4 col-xl-4 col-xxl-2"
-        style="position: fixed;left: 0;top: 60px;">
-        <li class="border-0 list-unstyled mb-3 description-title">
-            BACKGROUND
-        </li>
-        <li class="border-0 list-unstyled mb-3 description-title">
-            HISTORICAL RESEARCH
-        </li>
-        <li class="border-0 list-unstyled mb-3 description-title">
-            OUR METHODOLOGY
-        </li>
-        <li class="border-0 list-unstyled mb-3 description-title">
-            References
-        </li>
-    </ul>
-</div>
-<div class="container article-content">
-    <div class="row">
-        <ul class="col-8 col-sm-9 col-lg-9 col-xl-10 offset-3 offset-sm-3 offset-lg-3 offset-xl-2">
-            <li class="description-content list-unstyled bg-light p-3 shadow rounded-3 mb-3 bg-light">
-                <h4>BACKGROUND</h4>
-                <hr>
-                <p>Scientific research has shown that aging and diseases are mostly associated with the production of
-                    excess
-                    free radicals. Finding an effective way to scavenge free radicals is thought to be one of the most
-                    promising directions for food and cosmetic industries. To solve this problem, there is a growing
-                    interest in nutraceuticals and cosmetics containing antioxidants. Not all antioxidants are equally
-                    effective, but some of them do work. Ergothioneine (EGT) is a natural sulfur-containing histidine
-                    derivative. Due to its special thione structure and high redox potential, EGT is not prone to
-                    autooxidation under physiological pH conditions. Compared to other common antioxidants like
-                    glutathione
-                    and ascorbic acid, the high stability and potent antioxidant properties of EGT give it higher market
-                    demand and application prospects1, 2.
-                </p>
-                <p>
-                    As a powerful antioxidant, the biological effects of EGT has been confirmed by research. EGT has
-                    active
-                    effects on our health, like reducing cell oxidative damage, fighting inflammation, and treating
-                    cancer,
-                    diabetes, and cardiovascular diseases. It can also be safely used in new food supplements in the
-                    diet of
-                    infants, young children, and women who are pregnant or lactating. EGT was shown to improve the
-                    health
-                    and lifespan in a transgenic Caenorhabditis elegans model of Alzheimer’s disease with human
-                    β-amyloid
-                    accumulation3. In addition, a study explored the protective effects of EGT on the hCMEC/D3 human
-                    brain
-                    endothelial cell line by reducing the mRNA expression of pro-inflammatory cytokines, IL-1β IL-6,
-                    IL-8,
-                    TNF-α and cyclooxygenase-2 (COX2), as well as COX2 enzymatic activity4.
-                </p>
-                <p>
-                    The human body cannot synthesize EGT directly. As a result, there is a huge market demand for the
-                    production of EGT. Given that current production technology cannot keep up with people's needs, its
-                    price has been relatively high. Cultivating mushrooms is currently the main source of EGT in
-                    commercial
-                    production, but the long fermentation cycle and complex extraction methods lead to low production.
-                    In
-                    addition, chemical synthesis methods are expensive and complicated, and many consumers are concerned
-                    about chemical components present in chemically synthesis processes. Therefore, synthesis of EGT by
-                    microbial fermentation has attracted public attention.
-                </p>
-            </li>
-            <li class="description-content list-unstyled bg-light p-3 shadow rounded-3 mb-3 bg-light">
-                <h4>HISTORICAL RESEARCH</h4>
-                <hr>
-                <p>In 1909, EGT was first discovered in ergot fungus Claviceps purpurea, and it was later found to exist
-                    in
-                    human tissues and organs. Subsequently, the biosynthetic pathways and reaction sequence catalyzed by
-                    related enzymes have gradually become clear. It has been found that aerobic and anaerobic synthesis
-                    of
-                    EGT both exist in nature, the former being studied more deeply. There are two known aerobic
-                    biosynthetic
-                    pathways: the prokaryote Mycobacterium smegmatis pathway with egtABCDE and the eukaryote Neurospora
-                    crassa with egt1 and egt2. Comparing the two different pathways, the fungal one is simpler and more
-                    efficient. Further research has proved Egt1 to be a bifunctional enzyme that can simultaneously
-                    catalyzes two reactions, including the catalytic function of EgtABCD5. What’s more, fungal synthetic
-                    pathways do not require glutamate and ATP. Therefore, our team decided to use genes in fungal
-                    pathways
-                    to construct the same metabolic pathways in our own chassis.
-                </p>
-                <p>
-                    Based on the analysis of EGT biosynthetic pathways, researchers have achieved heterologous
-                    expression of
-                    EGT synthase in some model organisms, and constructed a series of EGT engineered strains. The
-                    engineered
-                    Saccharomyces cerevisiae was cultivated with precursors of histidine, methionine, and thiosulfate in
-                    fed-batch fermentation process, reaching 598mg/L of EGT after 84h cultivation6. Similarly, another
-                    group
-                    successfully enhanced titer of EGT more than one gram of 1.31g/L with Escherichia coli carrying
-                    egtBCDE
-                    form M. smegmatis and knock out of metJ 7. A recent study achieved the highest current production of
-                    EGT
-                    by co-expressing two Trichoderma reesei genes in E. coli, resulting in the production of EGT up to
-                    4.22g/L after 143 h of cultivation under whole-cell biocatalysis8.
-                </p>
-            </li>
-            <li class="description-content list-unstyled bg-light p-3 shadow rounded-3 mb-3 bg-light">
-                <h4>OUR METHODOLOGY</h4>
-                <hr>
-                <p>This year, our main goal is to achieve higher production of EGT. We use the engineered organism
-                    Saccharomyces cerevisiae, which is a GRAS (generally regarded as safe) microorganism. It has a clear
-                    genetic background, and is commonly used in simple genetic operations. It has been widely employed
-                    as
-                    the chassis organism for the biosynthesis of natural products in food, medicine, and other fields.
-                    In this work, we try to construct the EGT metabolic pathway in S. cerevisiae CEN.PK113-5D. The
-                    bacterium
-                    we used in the project for cloning unmethylated DNA is E. coli JM110. It is a commonly used strain,
-                    whose safety has been verified. Two genes, NcEgt1 and CpEgt2, will be integrated into our yeast
-                    genome
-                    by means of homologous recombination mediated by CRISPR-Cas9 technology. DNA sequences of NcEgt1 and
-                    CpEgt2 were derived from Neurospora crassa OR74A and Claviceps purpurea 20.1, and were
-                    codon-optimized
-                    for our yeast. With these methods, we could achieve the production of EGT in yeast, and then detect
-                    the
-                    target product both intracellularly and extracellularly in the engineered strain after 72h
-                    fermentation
-                    by means of HPLC. Additionally, the production can be further improved after optimizing the media
-                    with a
-                    proper concentration of amino acid, which is the precursor of EGT. Finally, we can increase
-                    additional
-                    copies of those two genes to increase production quantity.
-                </p>
-                <p>
-                    In conclusion, this work offers a more sustainable, low cost and efficient approach to manufacture
-                    EGT,
-                    which will continuously benefit our life and health.
-                </p>
-            </li>
-            <li class="description-content list-unstyled bg-light p-3 shadow rounded-3 mb-3 bg-light">
-                <h4>References</h4>
-                <hr>
-                <p>
-                    1. Cumming, B. M.; Chinta, K. C.; Reddy, V. P.; Steyn, A. J. C., Role of Ergothioneine in Microbial
-                    Physiology and Pathogenesis. Antioxid Redox Signal 2018, 28 (6), 431-444.
-                </p>
-                <p>
-                    2. Halliwell, B.; Cheah, I. K.; Tang, R. M. Y., Ergothioneine - a diet-derived antioxidant with
-                    therapeutic potential. FEBS Lett 2018, 592 (20), 3357-3366.
-                </p>
-                <p>
-                    3. Cheah, I. K.; Ng, L. T.; Ng, L. F.; Lam, V. Y.; Gruber, J.; Huang, C. Y. W.; Goh, F. Q.; Lim, K.
-                    H.
-                    C.; Halliwell, B., Inhibition of amyloid-induced toxicity by ergothioneine in a transgenic
-                    Caenorhabditis elegans model. FEBS Lett 2019, 593 (16), 2139-2150.
-                </p>
-                <p>
-                    4. Koh, S. S.; Ooi, S. C.; Lui, N. M.; Qiong, C.; Ho, L. T.; Cheah, I. K.; Halliwell, B.; Herr, D.
-                    R.;
-                    Ong, W. Y., Effect of Ergothioneine on 7-Ketocholesterol-Induced Endothelial Injury. Neuromolecular
-                    Med
-                    2021, 23 (1), 184-198.
-                </p>
-                <p>
-                    5. Han, Y.; Tang, X.; Zhang, Y.; Hu, X.; Ren, L. J., The current status of biotechnological
-                    production
-                    and the application of a novel antioxidant ergothioneine. Crit Rev Biotechnol 2021, 41 (4), 580-593.
-                </p>
-                <p>
-                    6. van der Hoek, S. A.; Darbani, B.; Zugaj, K. E.; Prabhala, B. K.; Biron, M. B.; Randelovic, M.;
-                    Medina, J. B.; Kell, D. B.; Borodina, I., Engineering the Yeast Saccharomyces cerevisiae for the
-                    Production of L-(+)-Ergothioneine. Front Bioeng Biotechnol 2019, 7, 262.
-                </p>
-                <p>
-                    7. Tanaka, N.; Kawano, Y.; Satoh, Y.; Dairi, T.; Ohtsu, I., Gram-scale fermentative production of
-                    ergothioneine driven by overproduction of cysteine in Escherichia coli. Sci Rep 2019, 9 (1), 1895.
-                </p>
-                <p>
-                    8. Chen, Z.; He, Y.; Wu, X.; Wang, L.; Dong, Z.; Chen, X., Toward more efficient ergothioneine
-                    production using the fungal ergothioneine biosynthetic pathway. Microb Cell Fact 2022, 21 (1), 76.
-                </p>
-            </li>
-        </ul>
+    <style>
+        .attributions-container {
+            background: #e0d7cc;
+        }
+
+        .attributions-container .pdf-frame {
+            width: 90%;
+            margin: 2rem;
+            height: 120vh;
+        }
+    </style>
+
+    <div class="attributions">
+        <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/description/description-material-00.png"
+             alt="">
     </div>
-</div>
+
+    <div class="container attributions-container d-flex justify-content-center">
+        <iframe class="pdf-frame" src="https://static.igem.wiki/teams/4249/wiki/description/description.pdf"
+                frameborder="0"></iframe>
+    </div>
 {% endblock %}
