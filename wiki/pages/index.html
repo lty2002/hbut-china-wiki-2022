@@ -1,57 +1,182 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
-    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+{% extends "layout.html" %}
 
-    <!-- Bootstrap CSS -->
-    <link href="{{ url_for('static', filename = 'bootstrap.css') }}" rel="stylesheet">
+{% block title %}Home{% endblock %}
+{% block lead %}<b>Welcome to iGEM 2022!</b> Your team has been approved and you are ready to start the iGEM
+    season!{% endblock %}
 
-    <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+{% block page_content %}
+    <style>
+        /* index start */
+        .index-upper-container {
+            width: 100%;
+            background: #3a3a7c;
+            background-size: 100%;
+        }
 
-    <!-- Font Awesome -->
-    <link href="{{ url_for('static', filename = 'font-awesome-4.7/css/font-awesome.min.css') }}" rel="stylesheet">
+        .index-upper-img-container {
+            position: relative;
+            height: 73vw;
+            overflow: hidden;
+        }
 
-    <title>{% block title %}{% endblock %} | HBUT-China - iGEM 2022</title>
+        .index-upper-img-container img {
+            display: block;
+            width: 100%;
+        }
 
-</head>
-<body class="position-relative">
-<!-- Navigation -->
-{% include 'menu.html' %}
+        .index-upper-img-container div:nth-child(1) {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
 
-<!-- Page Content -->
-<div style="overflow:hidden;">
-    <div id="luxy">
-        <div class="index-upper-container luxy-el" data-speed-y="30">
+        .index-upper-img-container div:nth-child(2) {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .index-upper-img-container div:nth-child(3) {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .index-upper-img-container div:nth-child(4) {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 4;
+        }
+
+        .index-upper-img-container div:nth-child(5) {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 5;
+        }
+
+        .index-upper-img-container div:nth-child(6) {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 6;
+        }
+
+        .index-lower-container {
+            position: relative;
+        }
+
+        .index-title1 {
+            position: relative;
+            background: url("https://static.igem.wiki/teams/4249/wiki/index/index-lower-1.png") no-repeat;
+            background-size: 400px;
+            width: 400px;
+            height: 130px;
+        }
+
+        .index-title1 > div {
+            position: absolute;
+            left: 180px;
+            bottom: 20px;
+            font-size: 32pt;
+            font-family: ecliptica-bt-semi-serif, sans-serif;
+            color: #113050;
+        }
+
+        .index-title1 > div::first-letter {
+            color: #A00F0F;
+        }
+
+        .index-title2 {
+            position: relative;
+            background: url("https://static.igem.wiki/teams/4249/wiki/index/index-lower-2.png") no-repeat;
+            background-size: 400px;
+            width: 400px;
+            height: 130px;
+        }
+
+        .index-title2 > div {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            font-size: 32pt;
+            font-family: ecliptica-bt-semi-serif, sans-serif;
+            color: #113050;
+        }
+
+        .index-title2 > div span {
+            display: inline-block;
+        }
+
+        .index-title2 > div span::first-letter {
+            color: #A00F0F;
+        }
+
+        .index-text-bg {
+            background-size: 700px;
+            width: 800px;
+            padding: 80px;
+        }
+
+        .index-text {
+            font-family: "caslon-bd-bt", sans-serif;
+            text-align: justify;
+            font-size: 16pt;
+        }
+
+        .index-text::first-letter {
+            float: left;
+            text-align: center;
+            font-size: 32pt;
+            font-weight: bold;
+            font-family: lucida-bright, sans-serif;
+        }
+
+        .index-circle-container {
+            background: url("https://static.igem.wiki/teams/4249/wiki/index/index-lower-4.png") no-repeat;
+            background-size: 180px;
+            width: 180px;
+            height: 180px;
+        }
+    </style>
+    <div class="position-relative">
+        <div class="index-upper-container" data-speed-y="30">
             <div class="index-upper-img-container scene overflow-visible" id="scene">
-                <div>
-                    <img class="index-upper-img-1 layer" data-depth="0.02"
-                         src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-1.png"
+                <div class="layer" data-depth="0.02">
+                    <img class="layer"
+                         src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-1.png" alt="">
+                </div>
+                <div class="layer" data-depth="0.05">
+                    <img src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-2.png" alt="">
+                </div>
+                <div class="layer" data-depth="0.10">
+                    <img src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-3.png" alt="">
+                </div>
+                <div class="layer" data-depth="0.20">
+                    <img src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-4.png" alt="">
+                </div>
+                <div class="layer" data-depth="0.3">
+                    <img src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-5.png"
+                         title="Antioxidant Alchemy:Cutting-edge synthesis of the potent antioxidant Ergothioneine"
                          alt="">
                 </div>
-                <div class="index-upper-img-2 layer" data-depth="0.05">
-                    <img class="index-upper-img-2"
-                         src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-2.png" alt="">
-                </div>
-                <div class="index-upper-img-3 layer" data-depth="0.10">
-                    <img class="index-upper-img-3"
-                         src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-3.png" alt="">
-                </div>
-                <div class="index-upper-img-4 layer" data-depth="0.20">
-                    <img class="index-upper-img-4"
-                         src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-4.png" alt="">
+                <div class="layer" data-depth="0">
+                    <img src="https://static.igem.wiki/teams/4249/wiki/index/index-upper-6.png" alt="">
                 </div>
             </div>
         </div>
-        <div class="index-lower-container luxy-el">
-            <div>
-                <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/index/index-lower-0.png" alt="">
-            </div>
-            <div class="w-100 " style="background:#f9f0e7;">
+        <div class="position-relative index-lower-container">
+            <div class="w-100" style="background:#f9f0e7;">
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="index-title1">
@@ -84,6 +209,7 @@
                     <div class="row justify-content-start">
                         <div class="col-8 index-text-bg py-5">
                             <div class="index-text border border-4 p-3">
+                                <p>Ergothioneine was produced in modified Saccharomyces cerevisiae using CRISPR-CAS9
                                 <p>Ergothioneine was produced in modified Saccharomyces cerevisiae using CRISPR-Cas9
                                     technology. We call it antioxidant alchemy.</p>
                                 <p>
@@ -114,32 +240,10 @@
                     </div>
                 </div>
             </div>
-            <div style="background: #f9f0e7;">
-                <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
-                {% include 'footer.html' %}
-            </div>
         </div>
-
     </div>
-
-
     <div class="sidebar d-none d-lg-block">
         <img class="top-img" src="https://static.igem.wiki/teams/4249/wiki/global/top.gif" alt="">
     </div>
+{% endblock %}
 
-
-</div>
-<div style="position: absolute;bottom: 0;width: 100%">
-    <!-- Wiki Tools: Teams are allowed to remove it -->
-    {% include 'wiki-tools.html' %}
-</div>
-<!-- Bootstrap Bundle with Popper -->
-<script src="{{ url_for('static', filename = 'bootstrap.bundle.js') }}"></script>
-<!-- jQuery JavaScript Library -->
-<script src="{{ url_for('static', filename = 'jquery-3.6.0.js') }}"></script>
-<script src="{{ url_for('static', filename = 'jquery.parallax.js') }}"></script>
-<script src="{{ url_for('static', filename = 'luxy.js') }}"></script>
-<script src="{{ url_for('static', filename = 'common.js') }}"></script>
-
-</body>
-</html>
