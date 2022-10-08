@@ -2,929 +2,949 @@
 
 {% block title %}Attributions{% endblock %}
 {% block lead %}Use this page to attribute work done on your project. This includes the work done by each of the student
-    members on your team and  any work that was done by people outside of your team, including the host labs, advisors,
-    instructors, and individuals not on the team roster. This requirement is not about literature references - these can
-    and should be displayed throughout your wiki.{% endblock %}
+members on your team and  any work that was done by people outside of your team, including the host labs, advisors,
+instructors, and individuals not on the team roster. This requirement is not about literature references - these can
+and should be displayed throughout your wiki.{% endblock %}
 
 {% block page_content %}
-    <style>
-        .content img {
-            user-select: none;
-            -ms-user-select: none;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-        }
+<style>
+    .content img {
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
 
-        .content .group-title {
-            width: 400px;
-            overflow: visible;
-            position: relative;
-        }
+    .content .group-title {
+        width: 400px;
+        overflow: visible;
+        position: relative;
+    }
 
-        .content .hp-title::after {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            content: "Human Practice Group";
-            font-family: caslon-bd-bt, sans-serif;
-            color: #f6efe7;
-            font-size: 24px;
-            text-align: center;
-        }
+    .content .hp-title::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "Human Practices Group";
+        font-family: caslon-bd-bt, sans-serif;
+        color: #f6efe7;
+        font-size: 24px;
+        text-align: center;
+    }
 
-        .content .lab-title::after {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            content: "Lab Group";
-            font-family: caslon-bd-bt, sans-serif;
-            color: #f6efe7;
-            font-size: 28px;
-            text-align: center;
-        }
+    .content .lab-title::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "Lab Group";
+        font-family: caslon-bd-bt, sans-serif;
+        color: #f6efe7;
+        font-size: 28px;
+        text-align: center;
+    }
 
-        .content .art-title::after {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            content: "Art Group";
-            font-family: caslon-bd-bt, sans-serif;
-            color: #f6efe7;
-            font-size: 28px;
-            text-align: center;
-        }
+    .content .art-title::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "Art Group";
+        font-family: caslon-bd-bt, sans-serif;
+        color: #f6efe7;
+        font-size: 28px;
+        text-align: center;
+    }
 
-        .content .mod-title::after {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            content: "Model Group";
-            font-family: caslon-bd-bt, sans-serif;
-            color: #f6efe7;
-            font-size: 28px;
-            text-align: center;
-        }
+    .content .mod-title::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "Model Group";
+        font-family: caslon-bd-bt, sans-serif;
+        color: #f6efe7;
+        font-size: 28px;
+        text-align: center;
+    }
 
-        .content .web-title::after {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            content: "Web Group";
-            font-family: caslon-bd-bt, sans-serif;
-            color: #f6efe7;
-            font-size: 28px;
-            text-align: center;
-        }
+    .content .web-title::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "Web Group";
+        font-family: caslon-bd-bt, sans-serif;
+        color: #f6efe7;
+        font-size: 28px;
+        text-align: center;
+    }
 
-        .content .pi-title::after {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            content: "Instructors";
-            font-family: caslon-bd-bt, sans-serif;
-            color: #f6efe7;
-            font-size: 28px;
-            text-align: center;
-        }
+    .content .pi-title::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "Instructors";
+        font-family: caslon-bd-bt, sans-serif;
+        color: #f6efe7;
+        font-size: 28px;
+        text-align: center;
+    }
 
-        .art {
-            color: #400804;
-        }
+    .art {
+        color: #400804;
+    }
 
-        .hp {
-            color: #a07029;
-        }
+    .hp {
+        color: #a07029;
+    }
 
-        .mod {
-            color: #af6787;
-        }
+    .mod {
+        color: #af6787;
+    }
 
-        .lab {
-            color: #1a3b21;
-        }
+    .lab {
+        color: #1a3b21;
+    }
 
-        .web {
-            color: #103050;
-        }
+    .web {
+        color: #103050;
+    }
 
-        .pi {
-            color: #3d2e61;
-        }
+    .pi {
+        color: #3d2e61;
+    }
 
-        .bg-art {
-            background: #400804;
-        }
+    .bg-art {
+        background: #400804;
+    }
 
-        .bg-hp {
-            background: #a07029;
-        }
+    .bg-hp {
+        background: #a07029;
+    }
 
-        .bg-mod {
-            background: #af6787;
-        }
+    .bg-mod {
+        background: #af6787;
+    }
 
-        .bg-lab {
-            background: #1a3b21;
-        }
+    .bg-lab {
+        background: #1a3b21;
+    }
 
-        .bg-web {
-            background: #103050;
-        }
+    .bg-web {
+        background: #103050;
+    }
 
-        .bg-pi {
-            background: #3d2e61;
-        }
+    .bg-pi {
+        background: #3d2e61;
+    }
 
-        .single-member {
-            margin-top: 0.75rem;
-        }
+    .single-member {
+        margin-top: 0.75rem;
+    }
 
-        .single-member .member-status {
-            font-family: caslonltstd-antique, sans-serif;
-            color: #400732;
-            font-size: 16pt;
-        }
+    .single-member .member-status {
+        font-family: caslonltstd-antique, sans-serif;
+        color: #400732;
+        font-size: 16pt;
+    }
 
-        .single-member .member-name {
-            font-family: modern20-bt, sans-serif;
-            margin: -0.5rem 0;
-            font-size: 20pt;
-            font-weight: bold;
-        }
+    .single-member .member-name {
+        font-family: modern20-bt, sans-serif;
+        margin: -0.5rem 0;
+        font-size: 20pt;
+        font-weight: bold;
+    }
 
-        .single-member .member-block {
-            font-family: caslon-bd-bt, sans-serif;
-            background: #e0d7cc;
-            min-height: 120px;
-            margin-top: 0.75rem;
-            margin-bottom: 0.75rem;
-            border-radius: 2px;
-            position: relative;
-        }
+    .single-member .member-block {
+        font-family: caslon-bd-bt, sans-serif;
+        background: #e0d7cc;
+        min-height: 120px;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        border-radius: 2px;
+        position: relative;
+    }
 
-        .single-member .member-block-left {
-            width: 40px !important;
-            position: relative;
-            flex-shrink: 0;
-        }
+    .single-member .member-block-left {
+        width: 40px !important;
+        position: relative;
+        flex-shrink: 0;
+    }
 
-        .single-member .member-block-left::before {
-            content: '';
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background: #f6efe7;
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            transform: translate(50%, -50%);
-        }
+    .single-member .member-block-left::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #f6efe7;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
 
-        .single-member .member-block-left::after {
-            content: '';
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            background: #f6efe7;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            transform: translate(50%, 50%);
-        }
+    .single-member .member-block-left::after {
+        content: '';
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #f6efe7;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+    }
 
-        .single-member .member-block-dot {
-            content: '';
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: block;
-            position: absolute;
-            right: 0;
-            bottom: 50%;
-            transform: translate(50%, 50%);
-        }
+    .single-member .member-block-dot {
+        content: '';
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+    }
 
-        .single-member .member-block-right {
-            position: relative;
-            color: #000000;
-            font-size: 15pt;
-            text-align: justify;
-        }
+    .single-member .member-block-right {
+        position: relative;
+        color: #000000;
+        font-size: 15pt;
+        text-align: justify;
+    }
 
-        .single-member .member-block-right ol {
-            margin: 1.5rem 1rem 1.5rem 2rem;
-        }
+    .single-member .member-block-right ol {
+        margin: 1.5rem 1rem 1.5rem 2rem;
+    }
 
-        .single-member .member-block-right li::marker {
-            content: '◆';
-            color: #A00F0F;
-            font-size: 15pt;
-        }
+    .single-member .member-block-right li::marker {
+        content: '◆';
+        color: #A00F0F;
+        font-size: 15pt;
+    }
 
-        .single-member .member-block-angle {
-            position: absolute;
-            right: 3px;
-            bottom: 3px;
-            width: 80px;
-            height: 80px;
-        }
+    .single-member .member-block-angle {
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+        width: 80px;
+        height: 80px;
+    }
 
-        .group-between {
-            margin-top: 1rem;
-            align-content: center;
-        }
+    .group-between {
+        margin-top: 1rem;
+        align-content: center;
+    }
 
-        .group-between .pattern {
-            width: 80px;
-        }
+    .group-between .pattern {
+        width: 80px;
+    }
 
-        .group-between .girl {
-            width: 250px;
-        }
+    .group-between .girl {
+        width: 250px;
+    }
 
-        .group-between span {
-            color: #A00F0F;
-        }
+    .group-between span {
+        color: #A00F0F;
+    }
 
-    </style>
+</style>
 
-    <div class="attributions">
-        <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-00.png" alt="">
-    </div>
+<div class="attributions">
+    <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-00.png" alt="">
+</div>
 
-    <div class="container content">
-        <div class="single-group">
-            <div class="mt-4 row justify-content-center">
-                <div class="group-title lab-title d-flex justify-content-center">
-                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-title.png" alt="">
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Leader</div>
-                    <div class="member-name lab">Changhan Yu</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-lab member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Major in the experiment design and staffing.</li>
-                                <li>Focus on the sampling and HPLC.</li>
-                                <li>Bridge the Human practices group and the model team to better performance.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png" alt="">
-                        </div>
+<div class="container content">
+    <div class="single-group">
+        <div class="mt-4 row justify-content-center">
+            <div class="group-title lab-title d-flex justify-content-center">
+                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-title.png" alt="">
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Leader</div>
+                <div class="member-name lab">Changhan Yu</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-lab member-block-dot"></div>
                     </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name lab">Xinyi Xia</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-lab member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Find the literature and discuss experimental opinions with group members.</li>
-                                <li>Participate in wet experiments, assist in completing molecular biology experiments,
-                                    mainly complete fermentation experiments.
-                                </li>
-                                <li>Participate in the writing of web contents.</li>
-                                <li>Assist in the shooting of promotion video.</li>
-                                <li>Participate in the communication and cooperation with other teams.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png" alt="">
-                        </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Majored in the experiment design and staffing.</li>
+                            <li>Focused on the sampling and HPLC.</li>
+                            <li>Bridged the Human practices group and the model team to better performance.</li>
+                        </ol>
                     </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name lab">Tongxin Wang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-lab member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Assist in molecular biology related experiments.</li>
-                                <li>Arranged the work of the experimental group.</li>
-                                <li>Design and optimize media-related protocols.</li>
-                                <li>Participate in all fermentation experiments.</li>
-                                <li>Wrote and proofread our experimental process.</li>
-                                <li>Give lectures to publicize the project.</li>
-                                <li>Participated in a series of exchange earning meetings.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name lab">Xi Wang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-lab member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Participate in wet experiments, complete both parts of cell-related work and
-                                    fermentation
-                                    work.
-                                </li>
-                                <li>Collection, isolation and purification of proteins.</li>
-                                <li>Identification of successful expression of enzymes and determination of enzyme
-                                    activity,
-                                    etc.
-                                </li>
-                                <li>Collect plasmid and operate PCR.</li>
-                                <li>Design the zymolysis and PB.</li>
-                                <li>Operate the fermentation and indemnification of the density of Ergothioneine by
-                                    HPLC.
-                                </li>
-                                <li>Wrote and proofread of our experimental process.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name lab">Junjun Feng</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-lab member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Participate in wet experiments and mainly completed part of medium.</li>
-                                <li>Assist in the construction of engineered strain.</li>
-                                <li>Participate in writing wiki.</li>
-                                <li>Assist in the shooting of promotion video.</li>
-                                <li>Involve in the communication with other teams.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png" alt="">
-                        </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png"
+                             alt="">
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="group-between d-flex flex-column align-items-center">
-            <div class="pattern">
-                <img class="mx-auto img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-            <div class="girl">
-                <img class="align-self-center img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
-                     alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-        </div>
-        <div class="single-group">
-            <div class="mt-4 row justify-content-center">
-                <div class="group-title hp-title d-flex justify-content-center">
-                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-title.png" alt="">
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Leader</div>
-                    <div class="member-name hp">Haiming Lan</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-hp member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Responsible for organizing and promoting HP activities.</li>
-                                <li>Make overall planning and coordinate the work among groups.</li>
-                                <li>Feedback and adjustment of work.</li>
-                                <li>Organize teams contact and communication.</li>
-                                <li>Complete the project introduction.</li>
-                                <li>Participate in the shooting of promotion video.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-angle.png" alt="">
-                        </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name lab">Xinyi Xia</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-lab member-block-dot"></div>
                     </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name hp">Yujiao Huang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-hp member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Connected with other teams.</li>
-                                <li>Operate a Wechat public account.</li>
-                                <li>Plan HP activities.</li>
-                                <li>Make some posters.</li>
-                                <li>Take part in lots of HP and educational activities</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-angle.png" alt="">
-                        </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Found the literature and discuss experimental opinions with group members.</li>
+                            <li>Participated in wet experiments, assisted in completing molecular biology experiments.
+                                Mainly complete fermentation experiments.
+                            </li>
+                            <li>Participated in the writing of web contents.</li>
+                            <li>Assisted in the shooting of promotion video.</li>
+                            <li>Participated in the communication and cooperation with other teams.</li>
+                        </ol>
                     </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name hp">Jing Wang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-hp member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Exchange learning with other teams and reach a cooperation project.</li>
-                                <li>Organize learning exchange meetings and take minutes of the meetings.</li>
-                                <li>Organize various Human practices activities and record the post-text materials.</li>
-                                <li>Participate in the operation of Wechat public account. Layout the text material and
-                                    publish.
-                                </li>
-                                <li>Participate in the writing of human practice group text and project-related content
-                                    on
-                                    the
-                                    team's official account.
-                                </li>
-                                <li>Translate various text materials.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-angle.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name hp">Qianting Liu</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-hp member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Seek exchange learning with other teams and seek partnerships.</li>
-                                <li>Organize and record the exchange learning meeting.</li>
-                                <li>Record Human practices activities and writ texts.</li>
-                                <li>Participate in the writing of the Human practices and related contents of project on
-                                    the Wechat public account.
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-angle.png" alt="">
-                        </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png"
+                             alt="">
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="group-between d-flex flex-column align-items-center">
-            <div class="pattern">
-                <img class="mx-auto img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-            <div class="girl">
-                <img class="align-self-center img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
-                     alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-        </div>
-        <div class="single-group">
-            <div class="mt-4 row justify-content-center">
-                <div class="group-title mod-title d-flex justify-content-center">
-                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/mod-title.png" alt="">
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Leader</div>
-                    <div class="member-name mod">Junni Huang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-mod member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Work with the experimental group.</li>
-                                <li>Attend group meetings and report work progress regularly.</li>
-                                <li>Build and modify the model.</li>
-                                <li>Establish the model of the cell growth curve model，the time model of Ergothionine
-                                    yield and the response surface.
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/mod-angle.png" alt="">
-                        </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name lab">Tongxin Wang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-lab member-block-dot"></div>
                     </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name mod">Xin Liang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-mod member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Process the original data and draw the corresponding image.</li>
-                                <li>Modify optimization model algorithm.</li>
-                                <li>Participate in the group meeting and actively communicate with the experimental
-                                    group.
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/mod-angle.png" alt="">
-                        </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Assisted in molecular biology related experiments.</li>
+                            <li>Arranged the work of the experimental group.</li>
+                            <li>Designed and optimized media-related protocols.</li>
+                            <li>Participated in all fermentation experiments.</li>
+                            <li>Wrote and proofread our experimental process.</li>
+                            <li>Gave lectures to publicize the project.</li>
+                            <li>Participated in a series of exchange earning meetings.</li>
+                        </ol>
                     </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name mod">Jiawen Tan</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-mod member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Responsible for data processing and statistic related issues.</li>
-                                <li>Participate in the shooting of promotion video.</li>
-                                <li>Help the group publicize the project.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/mod-angle.png" alt="">
-                        </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png"
+                             alt="">
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="group-between d-flex flex-column align-items-center">
-            <div class="pattern">
-                <img class="mx-auto img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-            <div class="girl">
-                <img class="align-self-center img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
-                     alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-        </div>
-        <div class="single-group">
-            <div class="mt-4 row justify-content-center">
-                <div class="group-title art-title d-flex justify-content-center">
-                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-title.png" alt="">
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Leader</div>
-                    <div class="member-name art">Yilin Lu</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-art member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Organize and promote the work of the art group, convene group meetings and assign
-                                    tasks.
-                                </li>
-                                <li>Responsible for part of the artwork, including but not limited to the design of
-                                    theme,
-                                    logo,
-                                    IP, logo text, posters, graphics.
-                                </li>
-                                <li>Feedback and adjustment of work.</li>
-                                <li>In communication with other teams, responsible for photography.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-angle.png" alt="">
-                        </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name lab">Xi Wang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-lab member-block-dot"></div>
                     </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name art">Anqi Liao</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-art member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Responsible for web design. Include the drawing of illustrations, the choice of
-                                    fonts,
-                                    the
-                                    layout of the pages and the design of all elements.
-                                </li>
-                                <li>Participate in the logo design, adjusting the colours and shape.</li>
-                                <li>Determine the style and matching of the team uniform and badge.</li>
-                                <li>Participate in IP design.</li>
-                                <li>Responsible for the layout of a promotional poster.</li>
-                                <li>Participate in offline promotional activities.</li>
-                                <li>Participate in the shooting of promotion video.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-angle.png" alt="">
-                        </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Participated in wet experiments, complete both parts of cell-related work and
+                                fermentation work.
+                            </li>
+                            <li>Worked in cllection, isolation and purification of proteins.</li>
+                            <li>Identification of successful expression of enzymes and determination of enzyme activity,
+                                etc.
+                            </li>
+                            <li>Collected plasmid and operated PCR.</li>
+                            <li>Designed the zymolysis and PB.</li>
+                            <li>Operated the fermentation and indemnification of the density of Ergothioneine by HPLC.
+                            </li>
+                            <li>Wrote and proofread of our experimental process.</li>
+                        </ol>
                     </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name art">Nuo Cheng</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-art member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Responsible for logo design.</li>
-                                <li>Video creative creation.</li>
-                                <li>Graphic poster design.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-angle.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name art">Meilin Feng</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-art member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Attend weekly discussion meetings on Fridays.</li>
-                                <li>Attend weekly meetings.</li>
-                                <li>Prepared and modified promotion video scripts in the early stage.</li>
-                                <li>Organize and participate in the promotion video process and shooting props.</li>
-                                <li>Contact with professional PI.</li>
-                                <li>Film of publicity activities and popular science lectures.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-angle.png" alt="">
-                        </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png"
+                             alt="">
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="group-between d-flex flex-column align-items-center">
-            <div class="pattern">
-                <img class="mx-auto img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-            <div class="girl">
-                <img class="align-self-center img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
-                     alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-        </div>
-        <div class="single-group">
-            <div class="mt-4 row justify-content-center">
-                <div class="group-title web-title d-flex justify-content-center">
-                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/web-title.png" alt="">
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Leader</div>
-                    <div class="member-name web">Tianyi Liang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-web member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Initialize and manage the repository on gitlab.igem.org.</li>
-                                <li>Collect materials from other groups.</li>
-                                <li>Design simple styles for wiki.</li>
-                                <li>Write some behavior and style code for wiki.</li>
-                                <li>Participate in communication activities with other teams.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/web-angle.png" alt="">
-                        </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name lab">Junjun Feng</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-lab member-block-dot"></div>
                     </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Group Member</div>
-                    <div class="member-name web">Yang Sun</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-web member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Participate in writing the codes of the wiki pages</li>
-                                <li>Fill the wiki with given material.</li>
-                                <li>Provide some suggestions about wiki design.</li>
-                                <li>Participate in communication activities with other teams.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/web-angle.png" alt="">
-                        </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Participated in wet experiments and mainly completed part of medium.</li>
+                            <li>Assisted in the construction of engineered strain.</li>
+                            <li>Participated in writing wiki.</li>
+                            <li>Assisted in the shooting of promotion video.</li>
+                            <li>Involved in the communication with other teams.</li>
+                        </ol>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="group-between d-flex flex-column align-items-center">
-            <div class="pattern">
-                <img class="mx-auto img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-            <div class="girl">
-                <img class="align-self-center img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
-                     alt="">
-            </div>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-        </div>
-        <div class="single-group">
-            <div class="mt-4 row justify-content-center">
-                <div class="group-title pi-title d-flex justify-content-center">
-                    <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-title.png" alt="">
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Our tutor of functional yeast and brewing microorganism</div>
-                    <div class="member-name pi">Lan Yao</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-pi member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Provided advice and insight on the project.</li>
-                                <li>Provided advice on presentation, safety form.</li>
-                                <li>provided us an opportunity to educate elementary school students about iGEM and
-                                    synthetic
-                                    biology.
-                                </li>
-                                <li>Assisted us with more background knowledge on EGT and also gave us some ideas on
-                                    what
-                                    form
-                                    our product will take.
-                                </li>
-                                <li>provided mentorship and helped with troubleshooting.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Our synthetic biology lab supervisor</div>
-                    <div class="member-name pi">Jun Dai</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-pi member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Provided lab space, materials and equipment.</li>
-                                <li>Helped us troubleshoot our experimental design.</li>
-                                <li>Teaching experimental methods: the experimental operation of CRISPR-Cas9, the
-                                    selection
-                                    of
-                                    plasmids, and the determination of gene loci.
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Our design guide and English teaching tutor</div>
-                    <div class="member-name pi">Kevin Schlei</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-pi member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Helps us improve our English.</li>
-                                <li>Provides an English correction in Wikipedia.</li>
-                                <li>Guides the art design of a web page.</li>
-                                <li>Shoots and produces promotional films.</li>
-                                <li>Give advice on the art design of websites and logos.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Something....</div>
-                    <div class="member-name pi">Jingfeng Tang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-pi member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Something....</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Technician of engineered strains</div>
-                    <div class="member-name pi">Wenxin Wang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-pi member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Responsible for organizing and promoting experiment，especially the genomic
-                                    manipulation
-                                    part.
-                                </li>
-                                <li>Make overall planning and coordinate the work among each group around experiment.
-                                </li>
-                                <li>Feedback the progress and adjust teamwork around the experiment.</li>
-                                <li>In the communication with other teams, responsible for Power Point and presentation.
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="single-member d-flex flex-column">
-                    <div class="member-status">Technician of engineered strains</div>
-                    <div class="member-name pi">Wenyue Wang</div>
-                    <div class="member-block w-100 d-flex">
-                        <div class="member-block-left">
-                            <div class="bg-pi member-block-dot"></div>
-                        </div>
-                        <div class="member-block-right">
-                            <ol type="I">
-                                <li>Responsible for organizing and promoting experiments.</li>
-                                <li>Make overall planning and coordinate the work among groups.</li>
-                                <li>Feedback and adjustment of work.</li>
-                                <li>Responsible for writing part of the web content.</li>
-                            </ol>
-                        </div>
-                        <div class="member-block-angle">
-                            <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png" alt="">
-                        </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/lab-angle.png"
+                             alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="group-between d-flex flex-column align-items-center">
+        <div class="pattern">
+            <img class="mx-auto img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+        <div class="girl">
+            <img class="align-self-center img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
+                 alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+    </div>
+    <div class="single-group">
+        <div class="mt-4 row justify-content-center">
+            <div class="group-title hp-title d-flex justify-content-center">
+                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-title.png" alt="">
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Leader</div>
+                <div class="member-name hp">Haiming Lan</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-hp member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Be rsponsible for organizing and promoting HP activities.</li>
+                            <li>Made overall planning and coordinate the work among groups.</li>
+                            <li>Done the feedback and adjustment of work.</li>
+                            <li>Organized teams contact and communication.</li>
+                            <li>Completed the project introduction.</li>
+                            <li>Participated in the shooting of promotion video.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name hp">Yujiao Huang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-hp member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Connected with other teams.</li>
+                            <li>Operated a Wechat public account.</li>
+                            <li>Planned HP activities.</li>
+                            <li>Made some posters.</li>
+                            <li>Took part in lots of HP and educational activities.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name hp">Jing Wang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-hp member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Done the exchange learning with other teams and reach a cooperation project.</li>
+                            <li>Organized learning exchange meetings and take minutes of the meetings.</li>
+                            <li>Organized various Human practices activities and record the post-text materials.</li>
+                            <li>Participated in the operation of Wechat public account. Layout the text material and
+                                publish.
+                            </li>
+                            <li>Participated in the writing of human practice group text and project-related content on
+                                the team's official account.
+                            </li>
+                            <li>Translated various text materials.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name hp">Qianting Liu</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-hp member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Sought exchange learning with other teams and seek partnerships.</li>
+                            <li>Organized and record the exchange learning meeting.</li>
+                            <li>Recorded Human practices activities and writ texts.</li>
+                            <li>Participated in the writing of the Human practices and related contents of project on
+                                the Wechat public account.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/hp-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="group-between d-flex flex-column align-items-center">
+        <div class="pattern">
+            <img class="mx-auto img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+        <div class="girl">
+            <img class="align-self-center img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
+                 alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+    </div>
+    <div class="single-group">
+        <div class="mt-4 row justify-content-center">
+            <div class="group-title mod-title d-flex justify-content-center">
+                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/mod-title.png" alt="">
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Leader</div>
+                <div class="member-name mod">Junni Huang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-mod member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Worked with the experimental group.</li>
+                            <li>Attended group meetings and report work progress regularly.</li>
+                            <li>Built and modify the model.</li>
+                            <li>Established the model of the cell growth curve model，the time model of Ergothionine
+                                yield and the response surface.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/mod-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name mod">Xin Liang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-mod member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Processed the original data and draw the corresponding image.</li>
+                            <li>Modified optimization model algorithm.</li>
+                            <li>Participated in the group meeting and actively communicate with the experimental
+                                group.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/mod-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name mod">Jiawen Tan</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-mod member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Be responsible for data processing and statistic related issues.</li>
+                            <li>Participated in the shooting of promotion video.</li>
+                            <li>Helped the group publicize the project.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/mod-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="group-between d-flex flex-column align-items-center">
+        <div class="pattern">
+            <img class="mx-auto img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+        <div class="girl">
+            <img class="align-self-center img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
+                 alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+    </div>
+    <div class="single-group">
+        <div class="mt-4 row justify-content-center">
+            <div class="group-title art-title d-flex justify-content-center">
+                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-title.png" alt="">
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Leader</div>
+                <div class="member-name art">Yilin Lu</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-art member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Organized and promote the work of the art group, convene group meetings and assign
+                                tasks.
+                            </li>
+                            <li>Be responsible for part of the artwork, including but not limited to the design of
+                                theme, logo, IP, logo text, posters, graphics.
+                            </li>
+                            <li>Done the dfedback and adjustment of work.</li>
+                            <li>Communicated with other teams, responsible for photography.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name art">Anqi Liao</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-art member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Be responsible for web design. Include the drawing of illustrations, the choice of
+                                fonts, the layout of the pages and the design of all elements.
+                            </li>
+                            <li>Participated in the logo design, adjusting the colours and shape.</li>
+                            <li>Determined the style and matching of the team uniform and badge.</li>
+                            <li>Participated in IP design.</li>
+                            <li>Responsible for the layout of a promotional poster.</li>
+                            <li>Participated in offline promotional activities.</li>
+                            <li>Participated in the shooting of promotion video.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name art">Nuo Cheng</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-art member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Be responsible for logo design.</li>
+                            <li>Done the Video creative creation.</li>
+                            <li>Done the graphic poster design.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name art">Meilin Feng</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-art member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Attended weekly discussion meetings on Fridays.</li>
+                            <li>Attended weekly meetings.</li>
+                            <li>Prepared and modified promotion video scripts in the early stage.</li>
+                            <li>Organized and participate in the promotion video process and shooting props.</li>
+                            <li>Contacted with professional PI.</li>
+                            <li>Filmed the publicity activities and popular science lectures.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/art-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="group-between d-flex flex-column align-items-center">
+        <div class="pattern">
+            <img class="mx-auto img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+        <div class="girl">
+            <img class="align-self-center img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
+                 alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+    </div>
+    <div class="single-group">
+        <div class="mt-4 row justify-content-center">
+            <div class="group-title web-title d-flex justify-content-center">
+                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/web-title.png" alt="">
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Leader</div>
+                <div class="member-name web">Tianyi Liang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-web member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Initialized and manage the repository on <i>gitlab.igem.org</i>.</li>
+                            <li>Collected materials from other groups.</li>
+                            <li>Designed simple styles for wiki.</li>
+                            <li>Wrote some behavior and style code for wiki.</li>
+                            <li>Participated in communication activities with other teams.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/web-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Group Member</div>
+                <div class="member-name web">Yang Sun</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-web member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Participated in writing the codes of the wiki pages.</li>
+                            <li>Filled the wiki with given material.</li>
+                            <li>Provided some suggestions about wiki design.</li>
+                            <li>Participated in communication activities with other teams.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/web-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="group-between d-flex flex-column align-items-center">
+        <div class="pattern">
+            <img class="mx-auto img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-01.png" alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+        <div class="girl">
+            <img class="align-self-center img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/attributions/attributions-materials-02.png"
+                 alt="">
+        </div>
+        <span>◆</span>
+        <span>◆</span>
+        <span>◆</span>
+    </div>
+    <div class="single-group">
+        <div class="mt-4 row justify-content-center">
+            <div class="group-title pi-title d-flex justify-content-center">
+                <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-title.png" alt="">
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Our tutor of functional yeast and brewing microorganism</div>
+                <div class="member-name pi">Lan Yao</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-pi member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Provided advice and insight on the project.</li>
+                            <li>Provided advice on presentation, safety form.</li>
+                            <li>provided us an opportunity to educate elementary school students about iGEM and
+                                synthetic biology.
+                            </li>
+                            <li>Assisted us with more background knowledge on EGT and also gave us some ideas on what
+                                form our product will take.
+                            </li>
+                            <li>provided mentorship and helped with troubleshooting.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Our synthetic biology lab supervisor</div>
+                <div class="member-name pi">Jun Dai</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-pi member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Provided lab space, materials and equipment.</li>
+                            <li>Helped us troubleshoot our experimental design.</li>
+                            <li>Teached experimental methods: the experimental operation of CRISPR-Cas9, the selection
+                                of plasmids, and the determination of gene loci.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Our design guide and English teaching tutor</div>
+                <div class="member-name pi">Kevin Schlei</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-pi member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Helped us improve our English.</li>
+                            <li>Provided an English correction in wiki.</li>
+                            <li>Guided the art design of a web page.</li>
+                            <li>Shot and produces promotional films.</li>
+                            <li>Gave advice on the art design of websites and logos.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Our guide instructors of iGEM</div>
+                <div class="member-name pi">Jingfeng Tang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-pi member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Provide modification suggestions for our experimental writing.</li>
+                            <li>Tutored our professional experimental skills.</li>
+                            <li>Gave us competition guidance as an experienced iGEMer.</li>
+                            <li>Provided financial support to our team.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Technician of engineered strains</div>
+                <div class="member-name pi">Wenxin Wang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-pi member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Be responsible for organizing and promoting experiment，especially the genomic
+                                manipulation part.
+                            </li>
+                            <li>Made overall planning and coordinate the work among each group around experiment.</li>
+                            <li>Done the feedback the progress and adjust teamwork around the experiment.</li>
+                            <li>Communicated with other teams, responsible for PPT slides and presentation.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-member d-flex flex-column">
+                <div class="member-status">Technician of engineered strains</div>
+                <div class="member-name pi">Wenyue Wang</div>
+                <div class="member-block w-100 d-flex">
+                    <div class="member-block-left">
+                        <div class="bg-pi member-block-dot"></div>
+                    </div>
+                    <div class="member-block-right">
+                        <ol type="I">
+                            <li>Be responsible for organizing and promoting experiments.</li>
+                            <li>Made overall planning and coordinate the work among groups.</li>
+                            <li>Done the feedback and adjustment of work.</li>
+                            <li>Be responsible for writing part of the web content.</li>
+                        </ol>
+                    </div>
+                    <div class="member-block-angle">
+                        <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/attributions/pi-angle.png"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
