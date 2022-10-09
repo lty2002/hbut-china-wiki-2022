@@ -27,13 +27,13 @@
                 <!---- TEAM ---->
                 <li class="nav-item dropdown">
 
-                    {% if ['team', 'attributions', 'collaborations'].__contains__(request.url.split('/')[-1]) %}
-                        <a class="nav-link dropdown-toggle cursor active" href="{{ url_for('pages', page='team') }}"
+                    {% if ['members', 'attributions', 'collaborations'].__contains__(request.url.split('/')[-1]) %}
+                        <a class="nav-link dropdown-toggle cursor active" href="#"
                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Team
                         </a>
                     {% else %}
-                        <a class="nav-link dropdown-toggle cursor" href="{{ url_for('pages', page='team') }}"
+                        <a class="nav-link dropdown-toggle cursor" href="#"
                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Team
                         </a>
