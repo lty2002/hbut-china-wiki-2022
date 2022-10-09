@@ -1,19 +1,31 @@
 {% extends "layout.html" %}
-  
+
 {% block title %}Proposed Implementation{% endblock %}
 {% block lead %}Explain how you would implement your project in the real world.{% endblock %}
 
 {% block page_content %}
+    <style>
+        .implementation-container {
+            background: #e0d7cc;
+        }
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #4</h4>
-      <p>Explain how you would implement your project in the real world.<p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
+        .implementation-container .pdf-frame {
+            width: 90%;
+            margin: 2rem;
+            height: 120vh;
+        }
+    </style>
+
+    <div class="implementation">
+        <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/implementation/implementation-material-00.png" alt="">
     </div>
-  </div>
-</div>
 
+    <div class="container implementation-container d-flex flex-column align-items-center">
+        <div class="col-10 col-lg-4 d-flex justify-content-center">
+            <img class="img-fluid"
+                 src="https://static.igem.wiki/teams/4249/wiki/implementation/implementation-material-01.png" alt="">
+        </div>
+        <iframe class="pdf-frame" src="https://static.igem.wiki/teams/4249/wiki/implementation/proposed-implementation.pdf"
+                frameborder="0"></iframe>
+    </div>
 {% endblock %}
