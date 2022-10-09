@@ -1,34 +1,151 @@
 {% extends "layout.html" %}
-  
+
 {% block title %}Notebook{% endblock %}
-{% block lead %}Document the dates you worked on your project. This should be a detailed account of the work done each day for your project.{% endblock %}
 
 {% block page_content %}
+    <style>
+        .notebook-title {
+            position: relative;
+            font-size: 18pt;
+            font-family: caslonltstd-antique, sans-serif;
+            color: #400732;
+        }
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Chronological notes of what your team is doing.</li>
-      <li>Brief descriptions of daily important events.</li>
-      <li>Pictures of your progress.</li>
-      <li>Mention who participated in what task.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul> 
-      <li><a href="http://2018.igem.org/Team:Munich/Notebook">2018 Munich</a></li>
-      <li><a href="https://2019.igem.org/Team:Georgia_State/Notebook">2019 Georgia State</a></li>
-      <li><a href="https://2019.igem.org/Team:Newcastle/Notebook">2019 Newcastle</a></li>
-      <li><a href="https://2020.igem.org/Team:IISER-Pune-India/Notebook">2020 IISER Pune India</a></li>
-      <li><a href="https://2020.igem.org/Team:Lund/Notebook">2020 Lund</a></li>
-      <li><a href="https://2020.igem.org/Team:NOVA_LxPortugal/Notebook">2020 NOVA LxPortugal</a></li>
-      <li><a href="https://2020.igem.org/Team:RDFZ-China/NoteBook">2020 RDFZ China</a></li>
-    </ul>
-  </div>
-</div>
+        .notebook-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            background: #C8B186FF;
+            height: 2px;
+            width: 40px;
+        }
+
+        .article .article-table table {
+            width: 100%;
+            border-top: 1.5pt solid #111111;
+            border-bottom: 1.5pt solid #111111;
+        }
+
+        .article .article-table thead th {
+            font-size: 18pt;
+            vertical-align: bottom;
+            border-bottom: 0.5pt solid #111111;
+        }
+
+        .article .article-table th, .article .article-table td {
+            font-size: 14pt;
+            padding: 0.25rem;
+            vertical-align: center;
+            text-align: center;
+        }
+
+        table a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    </style>
+
+    <div class="w-100">
+        <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/parts/parts-img-01.png" alt="">
+    </div>
+    <div class="row mt-4 justify-content-center">
+        <div class="row justify-content-center mt-5">
+            <div class="d-flex flex-column col-12 col-xl-6" style="background:#E0D7CC;">
+                <div class="col-4 align-self-center">
+                    <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/parts/parts-img-02.png" alt="">
+                </div>
+                <div class="article d-flex justify-content-center my-4">
+                    <div class="col-12 article-table">
+                        <table>
+                            <thead>
+                            <tr style="font-family: caslonltstd-antique, sans-serif;color: #400732;">
+                                <th scope="col">Date</th>
+                                <th scope="col">Events</th>
+                            </tr>
+                            </thead>
+                            <tbody style="font-family: caslon-bd-bt, sans-serif;">
+                            <tr>
+                                <td></td>
+                                <td>Brainstorming（Topic design, literature investigation）</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Design and synthesis of gene sequences and primers</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/3-24-3-30.pdf" target="_blank">3.24-3.30</a></td>
+                                <td>Double digest pML104, sgRNA hybridized, T4 ligation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/3-31-4-3.pdf" target="_blank">3.31-4.3</a></td>
+                                <td>Transformation and verification of recombination plasmid</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/4-4-5-9.pdf" target="_blank">4.4-5.9</a></td>
+                                <td>Construction of recombination plasmid pUC57-pADH1-NcEgt1-tCYC1</td>
+                            </tr>
+                            <tr>
+                                <td>Construction of recombination plasmid pUC57-H1-pADH1-NcEgt1-tCYC1-H2</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/5-10-5-14.pdf" target="_blank">5.10-5.14</a></td>
+                                <td>Transformation with donor DNA and recombination plasmid</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/5-15-5-21.pdf" target="_blank">5.15-5.21</a></td>
+                                <td>Selection of positive transformants and loss of sgRNA/Cas9 expression plasmid</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/5-22-5-28.pdf" target="_blank">5.22-5.28</a></td>
+                                <td>Fermentation culture of recombinant strain and detection of target product by HPLC
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5.29-6.3</td>
+                                <td>Detection of target product by LC-MS</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/6-4-6-16.pdf" target="_blank">6.4-6.16</a></td>
+                                <td>Construction of recombination plasmid pTEF2-pTEF1-CpEgt2-tCYC1</td>
+                            </tr>
+                            <tr>
+                                <td>Construction of recombination plasmid pTEF2-H1-pTEF1-CpEgt2-tCYC1-H2</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/6-17-6-22.pdf" target="_blank">6.17-6.22</a></td>
+                                <td>Construction of recombination pML104 targeting Saccharomyces cerevisiae chromosome 11</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/6-23-7-4.pdf" target="_blank">6.23-7.4</a></td>
+                                <td>Transformation with donor DNA and recombination plasmid</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/7-5-7-10.pdf" target="_blank">7.5-7.10</a></td>
+                                <td>Selection of positive transformants and loss of sgRNA/Cas9 expression plasmid</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/7-11-7-22.pdf" target="_blank">7.11-7.22</a></td>
+                                <td>Testing of EGT production capacity of two engineered strains</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://static.igem.wiki/teams/4249/wiki/implementation-docs/7-23-8-2.pdf" target="_blank">7.23-8.2</a></td>
+                                <td>Determination of growth curve</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12 pb-4">
+                    <p class="text-center"><span class="notebook-title"></span></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
 
 {% endblock %}
