@@ -1,4 +1,8 @@
 <style>
+    footer {
+        padding: 0 1rem;
+    }
+
     footer .text-red {
         color: #A00F0F;
     }
@@ -7,7 +11,7 @@
         width: 70px;
     }
 
-    .footer-main {
+    footer .footer-main {
         width: 100%;
         padding: 1rem 0;
         clip-path: polygon(50px 0, calc(100% - 50px) 0,
@@ -24,12 +28,12 @@
         font-family: Courier, sans-serif;
     }
 
-    .part-1, .part-2 {
+    footer .part-1, .part-2 {
         position: relative;
         overflow: visible;
     }
 
-    .part-1::before, .part-2::before {
+    footer .part-1::before, .part-2::before {
         position: absolute;
         content: '';
         bottom: 0;
@@ -41,7 +45,7 @@
         display: block;
     }
 
-    .part-1::after, .part-2::after {
+    footer .part-1::after, .part-2::after {
         position: absolute;
         content: '';
         right: 0;
@@ -53,7 +57,7 @@
         display: none;
     }
 
-    @media (min-width: 992px) {
+    footer @media (min-width: 992px) {
         .part-1::before, .part-2::before {
             display: none;
         }
@@ -63,72 +67,72 @@
         }
     }
 
-    .part-title {
+    footer .part-title {
         font-size: 28pt;
         font-weight: bold;
     }
 
-    .footer-main i {
+    footer .footer-main i {
         color: #103050;
         font-size: 16pt !important;
         line-height: 20pt;
     }
 
-    .contact-us-list {
+    footer .contact-us-list {
         width: 90%;
     }
 
-    .contact-us-list li {
+    footer .contact-us-list li {
         color: #09090a;
         font-size: 13pt;
         line-height: 20pt;
     }
 
-    .contact-us-list p, .contact-us-list a {
+    footer .contact-us-list p, .contact-us-list a {
         color: #09090a;
         margin-left: 0.5rem;
         line-height: 20pt;
     }
 
-    .contact-us-list p:hover, .contact-us-list a:hover {
+    footer .contact-us-list p:hover, .contact-us-list a:hover {
         color: #A00F0F;
         margin-left: 0.6rem;
     }
 
-    .qrcode {
+    footer .qrcode {
         width: 120px;
     }
 
-    .sponsor {
+    footer .sponsor {
         width: 200px;
     }
 
-    .must-mention {
+    footer .must-mention {
         color: #09090a;
         font-size: 14pt;
     }
 
-    .must-mention a {
+    footer .must-mention a {
         color: #09090a;
     }
 
-    .must-mention a:hover {
+    footer .must-mention a:hover {
         color: #A00F0F;
     }
 </style>
 <footer class="footer pt-5">
-    <div class="d-flex justify-content-center my-2">
+    <div class="d-flex justify-content-center">
         <div class="pattern">
             <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/footer/pattern.png" alt="">
         </div>
     </div>
     <div class="container footer-main">
-        <div class="row justify-content-center my-4">
+        <div class="d-flex justify-content-center">
             <div class="col-4 col-lg-2">
                 <img class="img-fluid" src="https://static.igem.wiki/teams/4249/wiki/footer/hbut-logo.png" alt="">
             </div>
         </div>
-        <div class="row">
+        <div class="row m-0">
             <div class="part-1 col-12 col-lg-4 px-2 py-2 d-flex flex-column justify-content-start align-items-center">
                 <div class="part-title text-nowrap align-self-center">
                     Contact Us<span class="text-red">.</span>
@@ -177,7 +181,7 @@
             </div>
         </div>
         <hr>
-        <div class="row mt-4 mx-1">
+        <div class="d-flex mt-4 mx-1">
             <div class="must-mention col text-center">
                 <p class="mb-0">
                     <small>© 2022 - Content on this site is licensed under a
