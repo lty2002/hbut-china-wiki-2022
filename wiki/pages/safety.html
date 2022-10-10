@@ -54,6 +54,88 @@
             background: #C8B186FF;
             text-align: center;
         }
+
+        .content .content-title {
+            font-family: caslonltstd-antique, sans-serif;
+            font-size: 24pt;
+            color: #400732;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .content .content-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            width: 70px;
+            border-bottom: #c8b186 solid 3px;
+        }
+
+        .content .content-body {
+            font-family: caslon-bd-bt, sans-serif;
+            font-size: 15pt;
+            color: #000000;
+        }
+
+        .content .content-body p {
+            padding: 10px 0;
+            text-align: justify;
+        }
+
+        .content .side-img-1 {
+            width: 250px;
+            margin: 1rem;
+        }
+
+        .content .side-img-2 {
+            width: 280px;
+            margin: 1rem;
+        }
+
+        .content .side-img-3 {
+            width: 420px;
+            margin: 0.5rem;
+        }
+
+        .content .content-description {
+            font-family: caslon-bd-bt, sans-serif;
+            color: #ffffff;
+            font-size: 16pt;
+            width: 100%;
+            padding: 3rem 2rem;
+            background: #c8b186;
+            text-align: center;
+        }
+
+        .content .pattern {
+            width: 100px;
+        }
+
+        .content .content-line {
+            color: #400732;
+            height: 3px;
+            opacity: 1;
+            overflow: visible;
+            position: relative;
+        }
+
+        .content .content-line::after {
+            display: block;
+            height: 20px;
+            width: 220px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: "ANGEL YEAST";
+            font-family: caslon-bd-bt, sans-serif;
+            font-style: italic;
+            color: #400732;
+            font-size: 16pt;
+            line-height: 20px;
+            background: #f6efe7;
+            text-align: center;
+        }
     </style>
 
     <div class="w-100">
@@ -117,48 +199,36 @@
         </div>
 
         <div class="row mt-5">
-            <div class="p-4" style="background:#C8B186;color: #ffffff">
-                <p class="safety-text text-center">
+            <div class="col-12">
+                <p class="text-center"><span class="safety-title">Laboratory</span></p>
+            </div>
+            <div>
+                <p class="safety-text">
                     The laboratory environment is in line with safety regulations, and there are corresponding emergency
                     equipment and emergency protocols. Professor Dai and Professor Yao are responsible for safety in the
                     lab.
                 </p>
                 <div class="col-12 d-flex justify-content-center">
-                    <img class="col-1 img-fluid" src="https://static.igem.wiki/teams/4249/wiki/safety/safety-img-03.png"
-                         alt="">
+                    <img class="col-10" src="https://static.igem.wiki/teams/4249/wiki/safety/safety-img-04.png" alt="">
                 </div>
-                <hr class="laboratory-divider mt-3">
-                <div class="row mt-5">
-                    <div class="col-12 col-xl-6 p-0">
-                        <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/safety/safety-img-04.png"
-                             alt="">
-                    </div>
-                    <div class="col-12 col-xl-6 d-flex" style="background:#DED7CF;">
-                        <p class="safety-text text-left align-self-center text-dark p-3">
-                            They are professors of Hubei University of Technology. They have provided support in the
-                            experiment design to maintain project safety. The link below contains the biosafety
-                            guideline for our laboratory: <a class="d-inline-block text-dark"
-                                                             href="https://zcc.hbut.edu.cn/info/1112/1544.htm">https://zcc.hbut.edu.cn/info/1112/1544.htm</a>
-                        </p>
-                    </div>
-                    <div class="col-12 col-xl-6 d-flex" style="background:#DED7CF;">
-                        <p class="safety-text text-left align-self-center text-dark p-3">
-                            Everyone involved in this project has already received security training. Training includes:
-                            the
-                            operating principles of instruments and equipment, the handling of chemical substances,
-                            laboratory emergency protocols, the maintenance of experiment equipment, and waste disposal
-                            measures. During all experimental operations, each member wore proper attire to protect
-                            personal
-                            safety.
-                        </p>
-                    </div>
-                    <div class="col-12 col-xl-6 p-0">
-                        <img class="w-100" src="https://static.igem.wiki/teams/4249/wiki/safety/safety-img-05.png"
-                             alt="">
-                    </div>
+                <p class="safety-text">
+                    They are professors of Hubei University of Technology. They have provided support in the experiment
+                    design to maintain project safety. The link below contains the biosafety guideline for our
+                    laboratory: <a class="d-inline-block text-dark" href="https://zcc.hbut.edu.cn/info/1112/1544.htm"
+                                   target="_blank">https://zcc.hbut.edu.cn/info/1112/1544.htm</a>
+                </p>
+                <div class="col-12 d-flex justify-content-center">
+                    <img class="col-6" src="https://static.igem.wiki/teams/4249/wiki/safety/safety-img-05.jpg" alt="">
                 </div>
+                <p class="safety-text">
+                    Everyone involved in this project has already received security training. Training includes: the
+                    operating principles of instruments and equipment, the handling of chemical substances, laboratory
+                    emergency protocols, the maintenance of experiment equipment, and waste disposal measures. During
+                    all experimental operations, each member wore proper attire to protect personal safety.
+                </p>
             </div>
         </div>
+
     </div>
 
 {% endblock %}
