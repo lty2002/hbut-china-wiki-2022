@@ -17,111 +17,110 @@
 
                 <!---- HOME ---->
                 <li class="nav-item">
-                    {% if request.url.split('/')[-1] == '' %}
-                        <a class="nav-link cursor active" href="{{ url_for('index') }}">Home</a>
-                    {% else %}
-                        <a class="nav-link cursor" href="{{ url_for('index') }}">Home</a>
-                    {% endif %}
+                    <a class="nav-link cursor{{ ' active' if request.url.split('/')[-1] == '' }}"
+                       href="{{ url_for('index') }}">Home</a>
                 </li>
 
                 <!---- PROJECT ---->
                 <li class="nav-item dropdown">
-                    {% if ['communication', 'contribution', 'description', 'engineering', 'experiments', 'implementation', 'notebook', 'model', 'partnership', 'results'].__contains__(request.url.split('/')[-1]) %}
-                        <a class="nav-link dropdown-toggle cursor active" href="#" id="navbarDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            Project
-                        </a>
-                    {% else %}
-                        <a class="nav-link dropdown-toggle cursor" href="#" id="navbarDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            Project
-                        </a>
-                    {% endif %}
+                    <a class="nav-link dropdown-toggle cursor{{ ' active' if request.url.split('/')[-1] in ['communication', 'contribution', 'description', 'engineering', 'experiments', 'implementation', 'notebook', 'model', 'partnership', 'results'] }}"
+                       href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Project
+                    </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='communication') }}">Communication</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'communication' }}"
+                               href="{{ url_for('pages', page='communication') }}">Communication</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='contribution') }}">Contribution</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'contribution' }}"
+                               href="{{ url_for('pages', page='contribution') }}">Contribution</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='description') }}">Description</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'description' }}"
+                               href="{{ url_for('pages', page='description') }}">Description</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='engineering') }}">Engineering</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'engineering' }}"
+                               href="{{ url_for('pages', page='engineering') }}">Engineering</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='experiments') }}">Experiments</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'experiments' }}"
+                               href="{{ url_for('pages', page='experiments') }}">Experiments</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='implementation') }}">Implementation</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'implementation' }}"
+                               href="{{ url_for('pages', page='implementation') }}">Implementation</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='notebook') }}">Notebook</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'notebook' }}"
+                               href="{{ url_for('pages', page='notebook') }}">Notebook</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='model') }}">Model</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'model' }}"
+                               href="{{ url_for('pages', page='model') }}">Model</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='partnership') }}">Partnership</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'partnership' }}"
+                               href="{{ url_for('pages', page='partnership') }}">Partnership</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='results') }}">Results</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'results' }}"
+                               href="{{ url_for('pages', page='results') }}">Results</a>
                         </li>
                     </ul>
                 </li>
 
                 <!---- PARTS ---->
                 <li class="nav-item dropdown">
-                    {% if request.url.split('/')[-1] == 'parts' %}
-                        <a class="nav-link cursor active" href="{{ url_for('pages', page='parts') }}">Parts</a>
-                    {% else %}
-                        <a class="nav-link cursor" href="{{ url_for('pages', page='parts') }}">Parts</a>
-                    {% endif %}
+                    <a class="nav-link cursor{{ ' active' if request.url.split('/')[-1] == 'parts' }}"
+                       href="{{ url_for('pages', page='parts') }}">Parts</a>
                 </li>
 
                 <!---- SAFETY ---->
                 <li class="nav-item">
-                    {% if request.url.split('/')[-1] == 'safety' %}
-                        <a class="nav-link cursor active" href="{{ url_for('pages', page='safety') }}">Safety</a>
-                    {% else %}
-                        <a class="nav-link cursor" href="{{ url_for('pages', page='safety') }}">Safety</a>
-                    {% endif %}
+                    <a class="nav-link cursor{{ ' active' if request.url.split('/')[-1] == 'safety' }}"
+                       href="{{ url_for('pages', page='safety') }}">Safety</a>
                 </li>
 
                 <!---- HUMAN PRACTICES ---->
                 <li class="nav-item dropdown">
-                    {% if ['human-practices', 'education'].__contains__(request.url.split('/')[-1]) %}
-                        <a class="nav-link dropdown-toggle cursor active" href="#" id="navbarDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            Human Practices
-                        </a>
-                    {% else %}
-                        <a class="nav-link dropdown-toggle cursor" href="#" id="navbarDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            Human Practices
-                        </a>
-                    {% endif %}
+                    <a class="nav-link dropdown-toggle cursor{{ ' active' if request.url.split('/')[-1] in ['human-practices', 'education'] }}"
+                       href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Human Practices
+                    </a>
+
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item cursor"
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'human-practices' }}"
                                href="{{ url_for('pages', page='human-practices') }}">Human Practices</a></li>
-                        <li><a class="dropdown-item cursor"
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'education' }}"
                                href="{{ url_for('pages', page='education') }}">Education</a></li>
                     </ul>
                 </li>
 
                 <!---- TEAM ---->
                 <li class="nav-item dropdown">
-
-                    {% if ['members', 'attributions', 'collaborations'].__contains__(request.url.split('/')[-1]) %}
-                        <a class="nav-link dropdown-toggle cursor active" href="#"
-                           id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Team
-                        </a>
-                    {% else %}
-                        <a class="nav-link dropdown-toggle cursor" href="#"
-                           id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Team
-                        </a>
-                    {% endif %}
+                    <a class="nav-link dropdown-toggle cursor{{ ' active' if request.url.split('/')[-1] in ['members', 'attributions', 'collaborations'] }}"
+                       href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Team
+                    </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='members') }}">Members</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'members' }}"
+                               href="{{ url_for('pages', page='members') }}">Members</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='attributions') }}">Attributions</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'attributions' }}"
+                               href="{{ url_for('pages', page='attributions') }}">Attributions</a>
                         </li>
-                        <li><a class="dropdown-item cursor" href="{{ url_for('pages', page='collaborations') }}">Collaborations</a>
+                        <li>
+                            <a class="dropdown-item cursor{{ ' dropdown-item-active' if request.url.split('/')[-1] == 'collaborations' }}"
+                               href="{{ url_for('pages', page='collaborations') }}">Collaborations</a>
                         </li>
                     </ul>
                 </li>

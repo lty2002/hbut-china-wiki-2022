@@ -110,6 +110,11 @@ body {
     background: #f9f0e7;
 }
 
+.dropdown-item-active {
+    background-color: #9eccd5;
+    color: #fff;
+}
+
 .dropdown-item:hover, .dropdown-item:focus {
     background-color: #9eccd5;
     color: #fff;
