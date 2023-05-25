@@ -4,3 +4,7 @@ venv
 .idea
 __pycache__
 public
+.DS_store
+temp
+script
+static/temp
